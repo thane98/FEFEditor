@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <Types>
+        <Type path="LVUP.bin.lz" prefix="MID_レベルアップ1_" suffix = "" name="Bad Level Up"/>
+        <Type path="LVUP.bin.lz" prefix="MID_レベルアップ2_" suffix = "" name="Standard Level Up"/>
+        <Type path="LVUP.bin.lz" prefix="MID_レベルアップ3_" suffix = "" name="Good Level Up"/>
+        <Type path="LVUP.bin.lz" prefix="MID_レベルアップ4_" suffix = "" name="Great Level Up"/>
+        <Type path="LVUP.bin.lz" prefix="MID_クラスチェンジ_" suffix = "" name="Maxed Level Up"/>
+        <Type path="アクセサリー.bin.lz" prefix="MKID_アクセサリー_欲しい_" suffix = "" name="Accessory Request"/>
+        <Type path="アクセサリー.bin.lz" prefix="MKID_アクセサリー_無い_" suffix = "" name="Accessory Reject"/>
+        <Type path="にぎやかし_恋人汎用.bin.lz" prefix="MKID_にぎやかし_恋人汎用_好きだよ_先_" suffix = "" name="Marriage Affirmation"/>
+        <Type path="にぎやかし_恋人汎用.bin.lz" prefix="MKID_にぎやかし_恋人汎用_好きだよ_後_" suffix = "" name="Marriage Affirmation Response"/>
+        <Type path="にぎやかし_恋人汎用.bin.lz" prefix="MKID_にぎやかし_恋人汎用_死なないで_先_" suffix = "" name="Stay Safe"/>
+        <Type path="にぎやかし_恋人汎用.bin.lz" prefix="MKID_にぎやかし_恋人汎用_死なないで_後_" suffix = "" name="Don't Worry"/>
+        <Type path="にぎやかし_物をもらった時.bin.lz" prefix="MKID_にぎやかし_物をもらった時_すごく嬉しい_" suffix = "" name="Accessory Accept (Perfect)"/>
+        <Type path="にぎやかし_物をもらった時.bin.lz" prefix="MKID_にぎやかし_物をもらった時_嬉しい_" suffix ="" name="Accessory Accept (Standard)"/>
+        <Type path="にぎやかし_物をもらった時.bin.lz" prefix="MKID_にぎやかし_物をもらった時_微妙_" suffix ="" name="Accessory Accept (Bad)"/>
+        <Type path="にぎやかし_物をもらった時.bin.lz" prefix="MKID_にぎやかし_物をもらった時_誕生日_" suffix ="" name="Accessory Accept (Birthday)"/>
+        <Type path="にぎやかし_物をもらった時.bin.lz" prefix="MKID_にぎやかし_物をもらった時_誕生日Ｓ_" suffix ="" name="Accessory Accept (Birthday, Married)"/>
+        <Type path="にぎやかし_絆汎用.bin.lz" prefix="MKID_にぎやかし_絆汎用_空き時間_先_" suffix ="" name="How do you spend your free time?"/>
+        <Type path="にぎやかし_絆汎用.bin.lz" prefix="MKID_にぎやかし_絆汎用_空き時間_後_" suffix ="" name="Free Time Response"/>
+        <Type path="にぎやかし_絆汎用.bin.lz" prefix="MKID_にぎやかし_絆汎用_闘い_先_" suffix ="" name="Will you fight with me?"/>
+        <Type path="にぎやかし_絆汎用.bin.lz" prefix="MKID_にぎやかし_絆汎用_闘い_後_" suffix ="" name="Fight Request Response"/>
+        <Type path="にぎやかし_親子汎用.bin.lz" prefix="MKID_にぎやかし_親子汎用_欲しいもの_先_" suffix ="_子" name="Can I do anything for you?"/>
+        <Type path="にぎやかし_親子汎用.bin.lz" prefix="MKID_にぎやかし_親子汎用_欲しいもの_後_" suffix ="_子" name="No thanks. (Parent to Child)"/>
+        <Type path="にぎやかし_親子汎用.bin.lz" prefix="にぎやかし_親子汎用_欲しいもの_" suffix ="_親" name="Can I do anything for you response. (Child to Parent)"/>
+        <Type path="にぎやかし_親子汎用.bin.lz" prefix="MKID_にぎやかし_親子汎用_一緒_先_" suffix ="_子" name="I like spending time with you."/>
+        <Type path="にぎやかし_親子汎用.bin.lz" prefix="MKID_にぎやかし_親子汎用_一緒_後_" suffix ="_子" name="Spending Time Response (Parent to Child)"/>
+        <Type path="にぎやかし_親子汎用.bin.lz" prefix="MKID_にぎやかし_親子汎用_一緒_後_" suffix ="_親" name="Spending Time Response (Child to Parent)"/>
+        <Type path="にぎやかし_通りすがり.bin.lz" prefix="MKID_にぎやかし_通りすがり_元気？_" suffix ="" name="How are you doing today?"/>
+        <Type path="にぎやかし_通りすがり.bin.lz" prefix="MKID_にぎやかし_通りすがり_今してること_" suffix ="" name="Currently Busy"/>
+        <Type path="にぎやかし_通りすがり.bin.lz" prefix="MKID_にぎやかし_通りすがり_次の戦い_" suffix ="" name="I'm ready for the next battle."/>
+        <Type path="にぎやかし_通りすがり.bin.lz" prefix="MKID_にぎやかし_通りすがり_ひまだな_" suffix ="" name="Bored"/>
+        <Type path="にぎやかし_通りすがり.bin.lz" prefix="MKID_にぎやかし_通りすがり_おつかれ_" suffix ="" name="You're working hard."/>
+        <Type path="にぎやかし_通りすがり.bin.lz" prefix="MKID_にぎやかし_通りすがり_ありがとう_" suffix ="" name="Thank you for your hard work."/>
+        <Type path="にぎやかし_通りすがり.bin.lz" prefix="MKID_にぎやかし_通りすがり_誕生日_" suffix ="" name="Happy Birthday!"/>
+        <Type path="にぎやかし_通りすがり.bin.lz" prefix="MKID_にぎやかし_通りすがり_誕生日Ｓ_" suffix ="" name="Happy Birthday! (Married)"/>
+        <Type path="にぎやかし_通りすがり.bin.lz" prefix="MKID_にぎやかし_通りすがり_他人_" suffix ="" name="Welcome Visitor"/>
+        <Type path="マイルーム_挨拶.bin.lz" prefix="MKID_MYROOM_招待挨拶_" suffix ="_0" name="Entering My Room"/>
+        <Type path="マイルーム_挨拶.bin.lz" prefix="MKID_MYROOM_招待挨拶_" suffix ="_1" name="Entering My Room (2)"/>
+        <Type path="マイルーム_挨拶.bin.lz" prefix="MKID_MYROOM_招待挨拶_" suffix ="_2" name="Entering My Room (3)"/>
+        <Type path="マイルーム_挨拶.bin.lz" prefix="MKID_MYROOM_招待挨拶_" suffix ="_3" name="Welcome Home"/>
+        <Type path="マイルーム_挨拶.bin.lz" prefix="MKID_MYROOM_招待挨拶_" suffix ="" name="Welcome Home (2)"/>
+        <Type path="マイルーム_挨拶.bin.lz" prefix="MKID_MYROOM_招待挨拶_" suffix ="" name="Welcome Home (3)"/>
+        <Type path="マイルーム_挨拶.bin.lz" prefix="MKID_MYROOM_招待挨拶_" suffix ="_6" name="Entering My Room (Married)"/>
+        <Type path="下画面セリフ_武器屋道具屋.bin.lz" prefix="MKID_下画面セリフ_武器屋道具屋_買う_自分店番_" suffix ="" name="Buying Items for Merchant"/>
+        <Type path="下画面セリフ_武器屋道具屋.bin.lz" prefix="MKID_下画面セリフ_武器屋道具屋_買う_" suffix ="" name="Buying Items"/>
+        <Type path="下画面セリフ_武器屋道具屋.bin.lz" prefix="MKID_下画面セリフ_武器屋道具屋_売る_自分店番_" suffix ="" name="Selling Merchant's Items"/>
+        <Type path="下画面セリフ_武器屋道具屋.bin.lz" prefix="MKID_下画面セリフ_武器屋道具屋_売る_" suffix ="" name="Selling Items"/>
+        <Type path="下画面セリフ_錬成屋.bin.lz" prefix="MKID_下画面セリフ_錬成屋_自分店番_" suffix ="" name="Forging for Merchant"/>
+        <Type path="下画面セリフ_錬成屋.bin.lz" prefix="MKID_下画面セリフ_錬成屋_" suffix ="" name="Forging"/>
+        <Type path="店番_アクセサリー屋.bin.lz" prefix="MKID_店番_アクセサリー屋_" suffix ="" name="Accessory Merchant"/>
+        <Type path="店番_クジ引き屋.bin.lz" prefix="MKID_店番_クジ引き屋_" suffix ="_0" name="Welcome to the Lottery"/>
+        <Type path="店番_クジ引き屋.bin.lz" prefix="MKID_店番_クジ引き屋_" suffix ="_1" name="Jackpot"/>
+        <Type path="店番_クジ引き屋.bin.lz" prefix="MKID_店番_クジ引き屋_" suffix ="_2" name="Silver Prize"/>
+        <Type path="店番_クジ引き屋.bin.lz" prefix="MKID_店番_クジ引き屋_" suffix ="_2" name="Bronze Prize"/>
+        <Type path="店番_他に用は.bin.lz" prefix="MKID_店番_他に用は_" suffix ="" name="Need anything else?"/>
+        <Type path="店番_武器屋.bin.lz" prefix="MKID_店番_武器屋_" suffix ="" name="Welcome to the armory."/>
+        <Type path="店番_温泉.bin.lz" prefix="MKID_店番_温泉_" suffix ="_0" name="Welcome to the spa."/>
+        <Type path="店番_温泉.bin.lz" prefix="MKID_店番_温泉_" suffix ="_1" name="Entered Spa (Wrong Gender)"/>
+        <Type path="店番_温泉.bin.lz" prefix="MKID_店番_温泉_" suffix ="_2" name="Entered Spa (Married)"/>
+        <Type path="店番_牢屋.bin.lz" prefix="MKID_店番_牢屋_" suffix ="_0" name="Welcome to the prison."/>
+        <Type path="店番_牢屋.bin.lz" prefix="MKID_店番_牢屋_" suffix ="_1" name="Let's Interrogate"/>
+        <Type path="店番_道具屋.bin.lz" prefix="MKID_店番_道具屋_" suffix ="" name="Welcome to the staff store."/>
+        <Type path="店番_鉱石_他城.bin.lz" prefix="MKID_店番_鉱石_他城_" suffix ="" name="Take this ore. (Visitor)"/>
+        <Type path="店番_鉱石_白.bin.lz" prefix="MKID_店番_鉱石_白_" suffix ="_0" name="Take this ore. (Spring 1)"/>
+        <Type path="店番_鉱石_白.bin.lz" prefix="MKID_店番_鉱石_白_" suffix ="_1" name="Take this ore. (Spring 2)"/>
+        <Type path="店番_鉱石_白.bin.lz" prefix="MKID_店番_鉱石_白_" suffix ="_2" name="Take this ore. (Spring 3)"/>
+        <Type path="店番_鉱石_黒.bin.lz" prefix="MKID_店番_鉱石_黒_" suffix ="_0" name="Take this ore. (Mine 1)"/>
+        <Type path="店番_鉱石_黒.bin.lz" prefix="MKID_店番_鉱石_黒_" suffix ="_1" name="Take this ore. (Mine 2)"/>
+        <Type path="店番_鉱石_黒.bin.lz" prefix="MKID_店番_鉱石_黒_" suffix ="_2" name="Take this ore. (Mine 3)"/>
+        <Type path="店番_錬成屋.bin.lz" prefix="MKID_店番_錬成屋_" suffix ="" name="Welcome to the forge."/>
+        <Type path="店番_闘技場.bin.lz" prefix="MKID_店番_闘技場_" suffix ="_店番挨拶" name="Welcome to the arena."/>
+        <Type path="店番_闘技場.bin.lz" prefix="MKID_店番_闘技場_" suffix ="_助太刀挨拶" name="Let me help you. (Arena)"/>
+        <Type path="店番_闘技場.bin.lz" prefix="MKID_店番_闘技場_" suffix ="_店番勝利" name="Arena Victory"/>
+        <Type path="店番_闘技場.bin.lz" prefix="MKID_店番_闘技場_" suffix ="_店番敗北" name="Arena Loss"/>
+        <Type path="店番_食堂.bin.lz" prefix="MKID_店番_食堂_" suffix ="_0" name="Welcome to the mess hall."/>
+        <Type path="店番_食堂.bin.lz" prefix="MKID_店番_食堂_" suffix ="_1" name="Let's start cooking."/>
+        <Type path="店番_食堂.bin.lz" prefix="MKID_店番_食堂_" suffix ="_2" name="This food is great!"/>
+        <Type path="店番_食堂.bin.lz" prefix="MKID_店番_食堂_" suffix ="_3" name="Mediocre Meal"/>
+        <Type path="店番_食堂.bin.lz" prefix="MKID_店番_食堂_" suffix ="_4" name="Terrible Meal"/>
+        <Type path="店番_食材_他城.bin.lz" prefix="MKID_店番_食材_他城_" suffix ="" name="Take this food. (Visitor)"/>
+        <Type path="店番_食材_自城.bin.lz" prefix="MKID_店番_食材_肉_" suffix ="" name="Take this meat."/>
+        <Type path="店番_食材_自城.bin.lz" prefix="MKID_店番_食材_牛乳_" suffix ="" name="Take this milk."/>
+        <Type path="店番_食材_自城.bin.lz" prefix="MKID_店番_食材_魚_" suffix ="" name="Take this fish."/>
+        <Type path="店番_食材_自城.bin.lz" prefix="MKID_店番_食材_米_" suffix ="" name="Take this rice."/>
+        <Type path="店番_食材_自城.bin.lz" prefix="MKID_店番_食材_野菜_" suffix ="" name="Take these vegetables."/>
+        <Type path="店番_食材_自城.bin.lz" prefix="MKID_店番_食材_大豆_" suffix ="" name="Take these soybeans."/>
+        <Type path="店番_食材_自城.bin.lz" prefix="MKID_店番_食材_麦_" suffix ="" name="Take this wheat."/>
+        <Type path="店番_食材_自城.bin.lz" prefix="MKID_店番_食材_果実_" suffix ="" name="Take this fruit."/>
+        <Type path="店番_魔符屋.bin.lz" prefix="MKID_店番_魔符屋_" suffix ="" name="Welcome to the Einherjar shop."/>
+        <Type path="支援S_他に用は.bin.lz" prefix="MKID_MYROOM_他には_" suffix ="" name="Can I stay longer?"/>
+        <Type path="支援S_寝起き.bin.lz" prefix="MKID_MYROOM_睡眠成功_" suffix ="" name="Awaken Minigame Success"/>
+        <Type path="支援S_寝起き.bin.lz" prefix="MKID_MYROOM_睡眠失敗_" suffix ="" name="Awaken Minigame Failure"/>
+        <Type path="支援S_花.bin.lz" prefix="MKID_MYROOM_プレゼント挨拶_" suffix ="" name="Welcome back gift. (Spouse)"/>
+        <Type path="支援S_風呂.bin.lz" prefix="MKID_MYROOM_風呂_挨拶_" suffix ="" name="Cooling Minigame Init"/>
+        <Type path="支援S_風呂.bin.lz" prefix="MKID_MYROOM_風呂_喜_" suffix ="" name="Cooling Minigame Success"/>
+        <Type path="日常イベント.bin.lz" prefix="MKID_日常イベント_物を拾う_" suffix ="" name="What's this?"/>
+        <Type path="日常イベント.bin.lz" prefix="MKID_日常イベント_能力上昇_" suffix ="" name="I'm feeling good today!"/>
+        <Type path="日常イベント.bin.lz" prefix="MKID_日常イベント_武器経験上昇_" suffix ="" name="Weapon skill up."/>
+        <Type path="温泉_イベント.bin.lz" prefix="MKID_温泉_イベント_後から来る_" suffix ="" name="Joining the spa."/>
+        <Type path="温泉_イベント.bin.lz" prefix="MKID_温泉_イベント_感想_" suffix ="" name="The water feels nice."/>
+        <Type path="温泉_イベント.bin.lz" prefix="MKID_温泉_イベント_感想支援S_" suffix ="" name="The water feels nice. (Spouse)"/>
+        <Type path="食堂_料理完成.bin.lz" prefix="MKID_店番_食堂_料理完成_" suffix ="" name="Food is done."/>
+        <Type path="食堂_料理完成.bin.lz" prefix="MKID_店番_食堂_事故発生_" suffix ="" name="Food is done. (Bad)"/>
+    </Types>
+</root>

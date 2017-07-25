@@ -1,0 +1,75 @@
+#dispoGrid {
+	-fx-background-color: DARKSLATEGRAY;
+	-fx-border-color: black;
+	-fx-alignment: CENTER;
+}
+
+#dispoGrid:hover {
+	-fx-background-color: beige;
+	-fx-border-color: black;
+	-fx-alignment: CENTER;
+}
+
+#occupiedCoord {
+	-fx-background-color: gray;
+	-fx-border-color: black;
+	-fx-alignment: CENTER;
+}
+
+#occupiedCoord:hover {
+	-fx-background-color: beige;
+	-fx-border-color: black;
+	-fx-alignment: CENTER;
+}
+
+#selectedFaction {
+	-fx-background-color: lightsteelblue;
+	-fx-border-color: black;
+	-fx-alignment: CENTER;
+}
+
+#selectedFaction:hover {
+	-fx-background-color: beige;
+	-fx-border-color: black;
+	-fx-alignment: CENTER;
+}
+
+#selectedBlock {
+	-fx-background-color: seagreen;
+	-fx-border-color: black;
+	-fx-alignment: CENTER;
+}
+
+#selectedBlock:hover {
+	-fx-background-color: beige;
+	-fx-border-color: black;
+	-fx-alignment: CENTER;
+}
+
+#activeTile {
+	-fx-background-color: gainsboro;
+	-fx-border-color: black;
+	-fx-text-fill: black;
+	-fx-alignment: CENTER;
+}
+
+#activeTile:hover {
+	-fx-background-color: beige;
+	-fx-border-color: black;
+	-fx-text-fill: black;
+	-fx-alignment: CENTER;
+}
+
+#inactiveTile {
+	-fx-background-color: gray;
+	-fx-border-color: black;
+	-fx-text-fill: black;
+	-fx-alignment: CENTER;
+}
+
+#inactiveTile:hover {
+	-fx-background-color: beige;
+	-fx-border-color: black;
+	-fx-text-fill: black;
+	-fx-alignment: CENTER;
+}

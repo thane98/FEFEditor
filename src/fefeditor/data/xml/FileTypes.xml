@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<FatesTypes>
+		<Type name="FEFNightmare"/>
+		<Type name="Fates Script"/>
+		<Type name="Fates Script 3"/>
+        <Type name="IndirectSound Editor"/>
+		<Type name="Dialogue Editor"/>
+		<Type name="Support Editor"/>
+		<Type name="Dispo Editor"/>
+		<Type name="Person Editor"/>
+		<Type name="Terrain Editor"/>
+		<Type name="Castle Join Editor"/>
+	</FatesTypes>
+	<DLC>
+		<Type name="FEFNightmare"/>
+		<Type name="Fates Script 3"/>
+		<Type name="Dialogue Editor (DLC)"/>
+		<Type name="Support Editor (DLC)"/>
+		<Type name="Dispo Editor"/>
+		<Type name="Person Editor"/>
+		<Type name="Terrain Editor"/>
+	</DLC>
+</root>

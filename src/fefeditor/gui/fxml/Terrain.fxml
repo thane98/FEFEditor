@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="fefeditor.gui.controllers.fates.Terrain">
+    <MenuBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <Menu mnemonicParsing="false" text="File">
+            <MenuItem mnemonicParsing="false" onAction="#save" text="Save">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP"/>
+                </accelerator>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#export" text="Export"/>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem mnemonicParsing="false" onAction="#close" text="Close"/>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+            <MenuItem mnemonicParsing="false" onAction="#addTile" text="Add Tile"/>
+        </Menu>
+    </MenuBar>
+    <SplitPane dividerPositions="0.20601336302895323, 0.7850779510022272" focusTraversable="true" layoutY="32.0"
+               prefHeight="-1.0" prefWidth="-1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0">
+        <AnchorPane>
+            <ListView fx:id="tileList" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0"
+                      AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+        </AnchorPane>
+        <ScrollPane fx:id="scrollPane" prefHeight="-1.0" prefWidth="-1.0">
+            <AnchorPane fx:id="anchorPane" prefHeight="550.0" prefWidth="515.0">
+                <GridPane fx:id="gridPane" prefHeight="549.0" prefWidth="521.0" AnchorPane.bottomAnchor="0.0"
+                          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="5.0" prefWidth="30.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                        <RowConstraints minHeight="5.0" prefHeight="20.0" vgrow="ALWAYS"/>
+                    </rowConstraints>
+                </GridPane>
+            </AnchorPane>
+        </ScrollPane>
+        <ScrollPane prefHeight="551.0" prefWidth="200.0">
+            <AnchorPane>
+                <VBox fx:id="formBox" prefHeight="551.0" prefWidth="221.0" AnchorPane.bottomAnchor="0.0"
+                      AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                    </padding>
+                </VBox>
+            </AnchorPane>
+        </ScrollPane>
+    </SplitPane>
+</AnchorPane>
