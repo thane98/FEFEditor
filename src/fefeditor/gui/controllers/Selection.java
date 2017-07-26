@@ -104,6 +104,8 @@ public class Selection implements Initializable {
             Parent root = FXMLLoader.load(Main.class.getResource("gui/fxml/options.fxml"));
             Scene scene = new Scene(root, 395, 150);
             scene.getStylesheets().add(Main.class.getResource("gui/jmetro/JMetroLightTheme.css").toExternalForm());
+            stage.getIcons().add(new Image(Main.class.getResourceAsStream("icon.png")));
+            stage.setTitle("Options");
             stage.setResizable(false);
             stage.setScene(scene);
             stage.initModality(Modality.WINDOW_MODAL);
@@ -146,6 +148,9 @@ public class Selection implements Initializable {
                 break;
             case "Support Editor":
                 openEditor("Support.fxml");
+                break;
+            case "GameData Text Editor":
+                openEditor("GameDataText.fxml");
                 break;
             case "Dialogue Editor (DLC)":
                 openDialogueDLC();

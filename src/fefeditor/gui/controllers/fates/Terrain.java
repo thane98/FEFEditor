@@ -5,6 +5,7 @@ import fefeditor.bin.formats.fates.FatesTerrainFile;
 import fefeditor.common.FileDialogs;
 import fefeditor.data.FileData;
 import fefeditor.data.GuiData;
+import feflib.fates.TranslationManager;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -15,6 +16,8 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.util.StringConverter;
+import org.controlsfx.control.textfield.AutoCompletionBinding;
+import org.controlsfx.control.textfield.TextFields;
 
 import java.io.IOException;
 import java.net.URL;
@@ -34,12 +37,11 @@ public class Terrain implements Initializable {
     @FXML
     private GridPane gridPane;
 
-    private Label[][] tileLabels;
-
-    private FatesTerrainFile file;
-
+    private TranslationManager manager = TranslationManager.getInstance();
     private List<TextField> coreFields = new ArrayList<>();
     private List<TextField> blockFields = new ArrayList<>();
+    private Label[][] tileLabels;
+    private FatesTerrainFile file;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -63,6 +65,13 @@ public class Terrain implements Initializable {
                 anchorPane.setPrefWidth(newValue.doubleValue()));
         scrollPane.heightProperty().addListener((observable, oldValue, newValue) ->
                 anchorPane.setPrefHeight(newValue.doubleValue()));
+
+        AutoCompletionBinding<String> binding = TextFields.bindAutoCompletion(blockFields.get(0),
+                manager.getTiles().keySet());
+        binding.setOnAutoCompleted(event -> blockFields.get(0).setText(manager.getRealEntry(blockFields.get(0).getText())));
+        binding = TextFields.bindAutoCompletion(blockFields.get(1),
+                manager.getTiles().keySet());
+        binding.setOnAutoCompleted(event -> blockFields.get(1).setText(manager.getRealEntry(blockFields.get(1).getText())));
     }
 
     @FXML

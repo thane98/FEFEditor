@@ -119,9 +119,54 @@ public class Person implements Initializable {
         });
 
         removeBlock.setOnAction(event -> {
-            if (personList.getSelectionModel().getSelectedIndex() != -1)
-                person.getCharacters().remove(personList.getSelectionModel().getSelectedIndex());
+            int index = personList.getSelectionModel().getSelectedIndex();
+            if (index != -1)
+                person.getCharacters().remove(index);
             updateList();
+        });
+
+        pidText.textProperty().addListener((observable, oldValue, newValue) -> {
+            int index = personList.getSelectionModel().getSelectedIndex();
+            if(index != -1) {
+                person.getCharacters().get(index).setPid(newValue);
+                personList.getItems().set(index, newValue);
+            }
+        });
+        fidText.textProperty().addListener((observable, oldValue, newValue) -> {
+            int index = personList.getSelectionModel().getSelectedIndex();
+            if(index != -1) {
+                person.getCharacters().get(index).setFid(newValue);
+            }
+        });
+        aidText.textProperty().addListener((observable, oldValue, newValue) -> {
+            int index = personList.getSelectionModel().getSelectedIndex();
+            if(index != -1) {
+                person.getCharacters().get(index).setAid(newValue);
+            }
+        });
+        mPidText.textProperty().addListener((observable, oldValue, newValue) -> {
+            int index = personList.getSelectionModel().getSelectedIndex();
+            if(index != -1) {
+                person.getCharacters().get(index).setMPid(newValue);
+            }
+        });
+        mPidHText.textProperty().addListener((observable, oldValue, newValue) -> {
+            int index = personList.getSelectionModel().getSelectedIndex();
+            if(index != -1) {
+                person.getCharacters().get(index).setMPidH(newValue);
+            }
+        });
+        voiceText.textProperty().addListener((observable, oldValue, newValue) -> {
+            int index = personList.getSelectionModel().getSelectedIndex();
+            if(index != -1) {
+                person.getCharacters().get(index).setEnemyVoice(newValue);
+            }
+        });
+        combatText.textProperty().addListener((observable, oldValue, newValue) -> {
+            int index = personList.getSelectionModel().getSelectedIndex();
+            if(index != -1) {
+                person.getCharacters().get(index).setCombatMusic(newValue);
+            }
         });
 
         List<AutoCompletionBinding<String>> bindings = new ArrayList<>();

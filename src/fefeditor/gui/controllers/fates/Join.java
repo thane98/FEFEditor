@@ -41,7 +41,7 @@ public class Join implements Initializable {
         contextMenu.getItems().add(addBlock);
         contextMenu.getItems().add(removeBlock);
         joinList.setContextMenu(contextMenu);
-        addEventHandlers();
+        addListeners();
     }
     
     @FXML
@@ -62,7 +62,7 @@ public class Join implements Initializable {
         FileDialogs.saveFile(GuiData.getInstance().getStage(), file.serialize());
     }
 
-    private void addEventHandlers() {
+    private void addListeners() {
         joinList.getSelectionModel().selectedIndexProperty().addListener((arg0, oldValue, newValue) -> {
             if (joinList.getSelectionModel().getSelectedIndex() != -1) {
                 int index = newValue.intValue();
@@ -84,6 +84,32 @@ public class Join implements Initializable {
             if (joinList.getSelectionModel().getSelectedIndex() != -1)
                 file.getBlocks().remove(joinList.getSelectionModel().getSelectedIndex());
             updateList();
+        });
+
+        characterText.textProperty().addListener((observable, oldValue, newValue) -> {
+            int index = joinList.getSelectionModel().getSelectedIndex();
+            if(index != -1) {
+                file.getBlocks().get(index).setCharacter(newValue);
+                joinList.getItems().set(index, newValue);
+            }
+        });
+        birthrightText.textProperty().addListener((observable, oldValue, newValue) -> {
+            int index = joinList.getSelectionModel().getSelectedIndex();
+            if(index != -1) {
+                file.getBlocks().get(index).setBirthrightJoin(newValue);
+            }
+        });
+        conquestText.textProperty().addListener((observable, oldValue, newValue) -> {
+            int index = joinList.getSelectionModel().getSelectedIndex();
+            if(index != -1) {
+                file.getBlocks().get(index).setConquestJoin(newValue);
+            }
+        });
+        revelationText.textProperty().addListener((observable, oldValue, newValue) -> {
+            int index = joinList.getSelectionModel().getSelectedIndex();
+            if(index != -1) {
+                file.getBlocks().get(index).setRevelationJoin(newValue);
+            }
         });
 
         AutoCompletionBinding<String> binding = TextFields.bindAutoCompletion(characterText,

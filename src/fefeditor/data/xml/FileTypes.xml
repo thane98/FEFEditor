@@ -11,6 +11,7 @@
 		<Type name="Person Editor"/>
 		<Type name="Terrain Editor"/>
 		<Type name="Castle Join Editor"/>
+		<Type name="GameData Text Editor"/>
 	</FatesTypes>
 	<DLC>
 		<Type name="FEFNightmare"/>

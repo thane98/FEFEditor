@@ -9,30 +9,25 @@
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="fefeditor.gui.controllers.Selection">
-    <MenuBar layoutY="-2.0" prefHeight="32.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0"
-             AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fefeditor.gui.controllers.Selection">
+    <MenuBar layoutY="-2.0" prefHeight="32.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <Menu mnemonicParsing="false" onAction="#close" text="File">
-            <MenuItem mnemonicParsing="false" onAction="#close" text="Close"/>
+            <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
         </Menu>
         <Menu mnemonicParsing="false" text="Mode">
             <RadioMenuItem mnemonicParsing="false" onAction="#activateBaseList" selected="true" text="Base Game">
                 <toggleGroup>
-                    <ToggleGroup fx:id="mode"/>
+                    <ToggleGroup fx:id="mode" />
                 </toggleGroup>
             </RadioMenuItem>
-            <RadioMenuItem mnemonicParsing="false" onAction="#activateDlcList" text="DLC" toggleGroup="$mode"/>
+            <RadioMenuItem mnemonicParsing="false" onAction="#activateDlcList" text="DLC" toggleGroup="$mode" />
         </Menu>
         <Menu mnemonicParsing="false" text="Help">
-            <MenuItem mnemonicParsing="false" onAction="#openOptions" text="Options"/>
-            <SeparatorMenuItem mnemonicParsing="false"/>
-            <MenuItem mnemonicParsing="false" onAction="#openAbout" text="About"/>
+            <MenuItem mnemonicParsing="false" onAction="#openOptions" text="Options" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#openAbout" text="About" />
         </Menu>
     </MenuBar>
-    <ListView fx:id="typeList" layoutX="-1.0" layoutY="34.0" prefHeight="365.0" prefWidth="175.0"
-              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="37.0"/>
-    <AnchorPane fx:id="contentPane" layoutX="184.0" layoutY="33.0" minHeight="0.0" minWidth="0.0" prefHeight="325.0"
-                prefWidth="416.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="175.0"
-                AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0"/>
+    <ListView fx:id="typeList" layoutX="-1.0" layoutY="34.0" prefHeight="365.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="37.0" />
+    <AnchorPane fx:id="contentPane" layoutX="200.0" layoutY="33.0" minHeight="0.0" minWidth="0.0" prefHeight="325.0" prefWidth="416.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0" />
 </AnchorPane>
