@@ -1,6 +1,6 @@
 package fefeditor.gui.controllers.fates;
 
-import fefeditor.Main;
+import fefeditor.FEFEditor;
 import fefeditor.common.io.CompressionUtils;
 import fefeditor.data.FileData;
 import fefeditor.data.GuiData;
@@ -25,18 +25,12 @@ import java.nio.file.*;
 import java.util.*;
 
 public class DialogueDLC implements Initializable {
-    @FXML
-    private TextArea valueBox;
-    @FXML
-    private TextField pidField;
-    @FXML
-    private ListView<String> dialogueList;
-    @FXML
-    private AnchorPane pane;
-    @FXML
-    private Label pidLabel;
-    @FXML
-    private ProgressIndicator progress;
+    @FXML private TextArea valueBox;
+    @FXML private TextField pidField;
+    @FXML private ListView<String> dialogueList;
+    @FXML private AnchorPane pane;
+    @FXML private Label pidLabel;
+    @FXML private ProgressIndicator progress;
 
     private List<String> prefixes = new ArrayList<>();
     private List<String> suffixes = new ArrayList<>();
@@ -54,7 +48,7 @@ public class DialogueDLC implements Initializable {
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 
-            Document doc = dBuilder.parse(Main.class.getResourceAsStream("data/xml/Dialogue.xml"));
+            Document doc = dBuilder.parse(FEFEditor.class.getResourceAsStream("data/xml/Dialogue.xml"));
             doc.getDocumentElement().normalize();
             NodeList nList = doc.getDocumentElement().getElementsByTagName("Types").item(0).getChildNodes();
             for (int x = 0; x < nList.getLength(); x++) {
@@ -81,10 +75,11 @@ public class DialogueDLC implements Initializable {
         }
     }
 
+    @SuppressWarnings("unused")
     @FXML
     private void export() {
         FileChooser chooser = new FileChooser();
-        File file = chooser.showSaveDialog(GuiData.getInstance().getWorkingStage());
+        File file = chooser.showSaveDialog(GuiData.getInstance().getStage());
         if (file != null) {
             try {
                 Thread t = new Thread(() -> {

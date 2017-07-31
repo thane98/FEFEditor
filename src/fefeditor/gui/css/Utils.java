@@ -1,4 +1,4 @@
-package fefeditor.gui.jmetro;
+package fefeditor.gui.css;
 
 import com.sun.javafx.scene.text.TextLayout;
 import com.sun.javafx.tk.Toolkit;

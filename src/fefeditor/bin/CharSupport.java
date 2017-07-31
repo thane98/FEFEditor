@@ -1,4 +1,4 @@
-package fefeditor.bin.blocks;
+package fefeditor.bin;
 
 public class CharSupport
 {

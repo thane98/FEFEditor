@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="pane" prefHeight="260.0" prefWidth="539.0" xmlns="http://javafx.com/javafx/8.0.111"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="fefeditor.gui.controllers.fates.Dialogue">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="fefeditor.gui.controllers.fates.DialogueDLC">
     <SplitPane dividerPositions="0.35" layoutY="45.0" prefHeight="220.0" prefWidth="430.0"
                AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
                AnchorPane.topAnchor="45.0">

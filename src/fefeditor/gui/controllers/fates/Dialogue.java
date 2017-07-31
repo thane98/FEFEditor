@@ -1,6 +1,6 @@
 package fefeditor.gui.controllers.fates;
 
-import fefeditor.Main;
+import fefeditor.FEFEditor;
 import fefeditor.common.io.IOUtils;
 import fefeditor.common.io.CompressionUtils;
 import fefeditor.data.FileData;
@@ -57,7 +57,7 @@ public class Dialogue implements Initializable {
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 
-            Document doc = dBuilder.parse(Main.class.getResourceAsStream("data/xml/Dialogue.xml"));
+            Document doc = dBuilder.parse(FEFEditor.class.getResourceAsStream("data/xml/Dialogue.xml"));
             doc.getDocumentElement().normalize();
             NodeList nList = doc.getDocumentElement().getElementsByTagName("Types").item(0).getChildNodes();
             for (int x = 0; x < nList.getLength(); x++) {
@@ -95,18 +95,18 @@ public class Dialogue implements Initializable {
     private void export() {
         List<String> temp = new ArrayList<>();
         DirectoryChooser chooser = new DirectoryChooser();
-        File file = chooser.showDialog(GuiData.getInstance().getWorkingStage());
+        File file = chooser.showDialog(GuiData.getInstance().getStage());
         if (file != null) {
             try {
                 Thread t = new Thread(() -> {
                     for (Path p : filePaths) {
+                        File dest = new File(file, p.toFile().getName());
                         if (!temp.contains(p.toString())) {
                             try {
                                 progress.setVisible(true);
                                 String[] lines = new String[fileMap.get(p.toString()).size()];
                                 byte[] out = CompressionUtils.makeMessageArchive(fileMap.get(p.toString()).toArray(lines));
-                                Files.write(p, CompressionUtils.compress(out));
-                                IOUtils.copyFolder(FileData.getInstance().getWorkingFile(), file);
+                                Files.write(dest.toPath(), CompressionUtils.compress(out));
                                 progress.setVisible(false);
                             } catch (IOException e) {
                                 e.printStackTrace();
@@ -141,27 +141,6 @@ public class Dialogue implements Initializable {
     }
 
     private void addEventHandlers() {
-        GuiData.getInstance().getWorkingStage().setOnCloseRequest(we -> {
-            try {
-                Path directory = Paths.get(FileData.getInstance().getWorkingFile().getCanonicalPath());
-                Files.walkFileTree(directory, new SimpleFileVisitor<Path>() {
-                    @Override
-                    public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
-                        Files.delete(file);
-                        return FileVisitResult.CONTINUE;
-                    }
-
-                    @Override
-                    public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
-                        Files.delete(dir);
-                        return FileVisitResult.CONTINUE;
-                    }
-                });
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        });
-
         dialogueList.getSelectionModel().selectedIndexProperty().addListener((observable, oldValue, newValue) -> {
             int dialogueLine = getDialogueLine(newValue.intValue());
             if (dialogueLine == -1)

@@ -1,4 +1,4 @@
-package fefeditor.gui.jmetro;
+package fefeditor.gui.css;
 
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.BooleanPropertyBase;

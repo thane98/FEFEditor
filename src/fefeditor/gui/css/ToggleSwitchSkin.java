@@ -1,4 +1,4 @@
-package fefeditor.gui.jmetro;
+package fefeditor.gui.css;
 
 import com.sun.javafx.scene.control.skin.LabeledText;
 import javafx.animation.TranslateTransition;

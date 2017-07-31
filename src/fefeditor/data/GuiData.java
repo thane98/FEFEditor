@@ -1,6 +1,6 @@
 package fefeditor.data;
 
-import fefeditor.Main;
+import fefeditor.FEFEditor;
 import javafx.stage.Stage;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
@@ -15,16 +15,16 @@ public class GuiData {
     private static GuiData instance;
 
     private Stage stage;
-    private Stage workingStage;
     private List<String> baseTypes = new ArrayList<>();
     private List<String> dlcTypes = new ArrayList<>();
+    private List<String> awakeningTypes = new ArrayList<>();
 
     protected GuiData() {
         try {
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 
-            Document doc = dBuilder.parse(Main.class.getResourceAsStream("data/xml/FileTypes.xml"));
+            Document doc = dBuilder.parse(FEFEditor.class.getResourceAsStream("data/xml/FileTypes.xml"));
             doc.getDocumentElement().normalize();
             NodeList nList = doc.getDocumentElement().getElementsByTagName("FatesTypes").item(0).getChildNodes();
             for (int x = 0; x < nList.getLength(); x++) {
@@ -35,6 +35,11 @@ public class GuiData {
             for (int x = 0; x < nList.getLength(); x++) {
                 if (nList.item(x).getNodeType() == Node.ELEMENT_NODE)
                     dlcTypes.add(nList.item(x).getAttributes().getNamedItem("name").getNodeValue());
+            }
+            nList = doc.getDocumentElement().getElementsByTagName("Awakening").item(0).getChildNodes();
+            for (int x = 0; x < nList.getLength(); x++) {
+                if (nList.item(x).getNodeType() == Node.ELEMENT_NODE)
+                    awakeningTypes.add(nList.item(x).getAttributes().getNamedItem("name").getNodeValue());
             }
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -64,11 +69,7 @@ public class GuiData {
         this.stage = stage;
     }
 
-    public Stage getWorkingStage() {
-        return workingStage;
-    }
-
-    public void setWorkingStage(Stage workingStage) {
-        this.workingStage = workingStage;
+    public List<String> getAwakeningTypes() {
+        return awakeningTypes;
     }
 }

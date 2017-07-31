@@ -1,7 +1,7 @@
 package fefeditor.gui.controllers.fates;
 
-import fefeditor.bin.blocks.TileBlock;
-import fefeditor.bin.formats.fates.FatesTerrainFile;
+import feflib.fates.gamedata.terrain.TileBlock;
+import feflib.fates.gamedata.terrain.FatesTerrainFile;
 import fefeditor.common.FileDialogs;
 import fefeditor.data.FileData;
 import fefeditor.data.GuiData;
@@ -45,7 +45,7 @@ public class Terrain implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        GuiData.getInstance().getWorkingStage().setOnCloseRequest(we -> close());
+        GuiData.getInstance().getStage().setOnCloseRequest(we -> close());
 
         try {
             file = new FatesTerrainFile(FileData.getInstance().getWorkingFile(), "rw");
@@ -80,11 +80,12 @@ public class Terrain implements Initializable {
         stage.close();
     }
 
+    @SuppressWarnings("unused")
     @FXML
     private void export() {
         try {
             file.compile();
-            FileDialogs.saveStandardBin(GuiData.getInstance().getWorkingStage(), file);
+            FileDialogs.saveStandardBin(GuiData.getInstance().getStage(), file);
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -1,6 +1,6 @@
 package fefeditor.data;
 
-import fefeditor.Main;
+import fefeditor.FEFEditor;
 
 import java.util.prefs.Preferences;
 
@@ -15,7 +15,7 @@ public class PrefsSingleton {
     private String textPath;
 
     private PrefsSingleton() {
-        prefs = Preferences.userRoot().node(Main.class.getName());
+        prefs = Preferences.userRoot().node(FEFEditor.class.getName());
 
         autoComplete = prefs.getBoolean(AUTO_COMPLETE_ID, true);
         textPath = prefs.get(GAMEDATA_TEXT_PATH, "");

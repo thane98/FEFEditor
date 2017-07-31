@@ -12,15 +12,21 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fefeditor.gui.controllers.Selection">
     <MenuBar layoutY="-2.0" prefHeight="32.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <Menu mnemonicParsing="false" onAction="#close" text="File">
-            <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
+         <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
         </Menu>
+      <Menu mnemonicParsing="false" text="Edit">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#makeChapter" text="Make Chapter" />
+        </items>
+      </Menu>
         <Menu mnemonicParsing="false" text="Mode">
-            <RadioMenuItem mnemonicParsing="false" onAction="#activateBaseList" selected="true" text="Base Game">
-                <toggleGroup>
+         <RadioMenuItem mnemonicParsing="false" onAction="#activateAwakeningList" text="Awakening">
+            <toggleGroup>
                     <ToggleGroup fx:id="mode" />
-                </toggleGroup>
-            </RadioMenuItem>
-            <RadioMenuItem mnemonicParsing="false" onAction="#activateDlcList" text="DLC" toggleGroup="$mode" />
+            </toggleGroup>
+         </RadioMenuItem>
+            <RadioMenuItem mnemonicParsing="false" onAction="#activateBaseList" selected="true" text="Fates Base Game" toggleGroup="$mode" />
+            <RadioMenuItem mnemonicParsing="false" onAction="#activateDlcList" text="Fates DLC" toggleGroup="$mode" />
         </Menu>
         <Menu mnemonicParsing="false" text="Help">
             <MenuItem mnemonicParsing="false" onAction="#openOptions" text="Options" />

@@ -1,9 +1,9 @@
 package fefeditor.gui.controllers.fates;
 
-import fefeditor.bin.blocks.CharSupport;
-import fefeditor.bin.blocks.SupportCharacter;
-import fefeditor.common.inject.ArrayConvert;
-import fefeditor.common.inject.SupportBin;
+import fefeditor.bin.ArrayConvert;
+import fefeditor.bin.CharSupport;
+import fefeditor.bin.SupportCharacter;
+import fefeditor.bin.SupportBin;
 import fefeditor.common.io.CompressionUtils;
 import fefeditor.data.FileData;
 import fefeditor.data.GuiData;
@@ -90,7 +90,7 @@ public class Support implements Initializable {
         FileChooser.ExtensionFilter binFilter = new FileChooser.ExtensionFilter("Bin File (*.bin)", "*.bin");
         FileChooser.ExtensionFilter allFilter = new FileChooser.ExtensionFilter("All Files", "*");
         chooser.getExtensionFilters().addAll(lzFilter, binFilter, allFilter);
-        File file = chooser.showSaveDialog(GuiData.getInstance().getWorkingStage());
+        File file = chooser.showSaveDialog(GuiData.getInstance().getStage());
         if (file != null) {
             try {
                 if (file.getName().endsWith("lz")) {

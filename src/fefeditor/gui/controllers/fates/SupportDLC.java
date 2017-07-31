@@ -1,12 +1,12 @@
 package fefeditor.gui.controllers.fates;
 
-import fefeditor.bin.blocks.CharSupport;
-import fefeditor.bin.blocks.SupportCharacter;
-import fefeditor.common.inject.ArrayConvert;
+import fefeditor.bin.ArrayConvert;
+import fefeditor.bin.CharSupport;
+import fefeditor.bin.SupportCharacter;
+import fefeditor.bin.SupportBinDLC;
 import fefeditor.common.io.CompressionUtils;
 import fefeditor.data.FileData;
 import fefeditor.data.GuiData;
-import fefeditor.common.inject.SupportBinDLC;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -86,13 +86,6 @@ public class SupportDLC implements Initializable {
             for (SupportCharacter c : characters)
                 supportCList.getItems().add(c.getName());
             characterCList.setItems(supportCList.getItems());
-
-            supportCharacters = new ComboBox<>();
-            supportCharacters.setItems(supportCList.getItems());
-            supportTypes = new ComboBox<>();
-            supportTypes.getItems().addAll(Arrays.asList(
-                    "Romantic", "Fast Romantic", "Platonic", "Fast Platonic"
-            ));
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -102,11 +95,17 @@ public class SupportDLC implements Initializable {
             Label label = new Label(labels[x]);
             label.setFont(Font.font(Font.getDefault().getFamily(), FontWeight.BOLD, 14));
             supportForm.getChildren().add(label);
-
-            if (x == 0)
+            if (x == 0) {
+                supportCharacters = new ComboBox<>();
+                supportCharacters.setItems(supportCList.getItems());
                 supportForm.getChildren().add(supportCharacters);
-            else
+            } else {
+                supportTypes = new ComboBox<>();
+                supportTypes.getItems().addAll(Arrays.asList(
+                        "Romantic", "Fast Romantic", "Platonic", "Fast Platonic"
+                ));
                 supportForm.getChildren().add(supportTypes);
+            }
         }
 
         StringConverter<Short> hexFormatter = new StringConverter<Short>() {
@@ -148,6 +147,7 @@ public class SupportDLC implements Initializable {
         setCharacterHandlers();
     }
 
+    @SuppressWarnings("unused")
     @FXML
     private void export() {
         FileChooser chooser = new FileChooser();
@@ -155,7 +155,7 @@ public class SupportDLC implements Initializable {
         FileChooser.ExtensionFilter binFilter = new FileChooser.ExtensionFilter("Bin File (*.bin)", "*.bin");
         FileChooser.ExtensionFilter allFilter = new FileChooser.ExtensionFilter("All Files", "*");
         chooser.getExtensionFilters().addAll(lzFilter, binFilter, allFilter);
-        File file = chooser.showSaveDialog(GuiData.getInstance().getWorkingStage());
+        File file = chooser.showSaveDialog(GuiData.getInstance().getStage());
         if (file != null) {
             try {
                 String fileName;
@@ -178,6 +178,7 @@ public class SupportDLC implements Initializable {
         }
     }
 
+    @SuppressWarnings("unused")
     @FXML
     private void close() {
         Stage stage = (Stage) ap.getScene().getWindow();

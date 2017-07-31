@@ -1,13 +1,12 @@
-package fefeditor.gui.controllers.fates;
+package fefeditor.gui.controllers.awakening;
 
 import fefeditor.common.FileDialogs;
 import fefeditor.data.FileData;
 import fefeditor.data.GuiData;
+import feflib.awakening.data.dispo.ADispoBlock;
+import feflib.awakening.data.dispo.ADispoFaction;
+import feflib.awakening.data.dispo.AwakeningDispo;
 import feflib.controls.HexField;
-import feflib.fates.TranslationManager;
-import feflib.fates.gamedata.dispo.DispoBlock;
-import feflib.fates.gamedata.dispo.DispoFaction;
-import feflib.fates.gamedata.dispo.FatesDispo;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -17,8 +16,6 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import org.controlsfx.control.textfield.AutoCompletionBinding;
-import org.controlsfx.control.textfield.TextFields;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -29,29 +26,25 @@ import java.util.ResourceBundle;
 public class Dispo implements Initializable {
     @FXML private TreeView<String> factionTree;
     @FXML private VBox generalBox;
-    @FXML private VBox skillBox;
     @FXML private VBox itemBox;
     @FXML private AnchorPane dispoPane;
     @FXML private CheckMenuItem coordCheck;
     @FXML private GridPane dispoGrid;
     @FXML private ScrollPane dispoScrollPane;
 
-    private TranslationManager manager = TranslationManager.getInstance();
     private List<TextField> generalFields = new ArrayList<>();
     private List<HexField> generalHexFields = new ArrayList<>();
-    private List<Spinner<Integer>> generalSpinners = new ArrayList<>();
     private List<TextField> itemFields = new ArrayList<>();
     private List<HexField> itemHexFields = new ArrayList<>();
-    private List<TextField> skillFields = new ArrayList<>();
     private Region[][] dispoRegion;
-    private FatesDispo file;
-    private DispoFaction selectedFaction;
-    private DispoBlock selectedBlock;
+    private AwakeningDispo file;
+    private ADispoFaction selectedFaction;
+    private ADispoBlock selectedBlock;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         GuiData.getInstance().getStage().setOnCloseRequest(we -> close());
-        file = new FatesDispo(FileData.getInstance().getWorkingFile());
+        file = new AwakeningDispo(FileData.getInstance().getWorkingFile());
         setupDispoGrid();
         populateTree();
 
@@ -92,14 +85,14 @@ public class Dispo implements Initializable {
 
             Optional<String> result = dialog.showAndWait();
             result.ifPresent(str -> {
-                for (DispoFaction f : file.getFactions()) {
+                for (ADispoFaction f : file.getFactions()) {
                     if (f.getName().equals(str)) {
                         throwNameInUseDialog();
                         return;
                     }
                 }
                 selectedBlock = null;
-                DispoBlock block = new DispoBlock(str);
+                ADispoBlock block = new ADispoBlock(str);
                 selectedFaction.addSpawn(block);
                 populateTree();
                 selectFaction(selectedFaction);
@@ -112,7 +105,7 @@ public class Dispo implements Initializable {
     private void duplicateBlock() {
         if (selectedBlock == null)
             return;
-        DispoBlock block = new DispoBlock(selectedBlock);
+        ADispoBlock block = new ADispoBlock(selectedBlock);
         selectedBlock = null;
         selectedFaction.addSpawn(block);
         populateTree();
@@ -147,8 +140,8 @@ public class Dispo implements Initializable {
         Optional<String> result = dialog.showAndWait();
         if (result.isPresent()) {
             String str = result.get();
-            for (DispoFaction f : file.getFactions()) {
-                for (DispoBlock b : f.getSpawns()) {
+            for (ADispoFaction f : file.getFactions()) {
+                for (ADispoBlock b : f.getSpawns()) {
                     if (b.getPid().equals(str)) {
                         throwNameInUseDialog();
                         return;
@@ -161,7 +154,7 @@ public class Dispo implements Initializable {
             }
             selectedFaction = null;
             selectedBlock = null;
-            DispoFaction faction = new DispoFaction(str);
+            ADispoFaction faction = new ADispoFaction(str);
             file.getFactions().add(faction);
             populateTree();
             clearFields();
@@ -189,7 +182,7 @@ public class Dispo implements Initializable {
         updateOccupiedCoords();
     }
 
-    private void selectFaction(DispoFaction faction) {
+    private void selectFaction(ADispoFaction faction) {
         for (TreeItem<String> item : factionTree.getRoot().getChildren()) {
             if (item.getValue().equals(faction.getName())) {
                 factionTree.getSelectionModel().select(item);
@@ -210,7 +203,7 @@ public class Dispo implements Initializable {
         clearFields();
 
         boolean isFaction = false;
-        for (DispoFaction f : file.getFactions()) {
+        for (ADispoFaction f : file.getFactions()) {
             if (f.getName().equals(item.getValue()))
                 isFaction = true;
         }
@@ -230,26 +223,6 @@ public class Dispo implements Initializable {
         generalBox.getChildren().add(new Label("PID:"));
         generalBox.getChildren().add(new TextField());
         generalFields.add((TextField) generalBox.getChildren().get(generalBox.getChildren().size() - 1));
-        generalBox.getChildren().add(new Label("Coordinate 1:"));
-        generalBox.getChildren().add(new HexField(2, true));
-        generalHexFields.add((HexField) generalBox.getChildren().get(generalBox.getChildren().size() - 1));
-        generalBox.getChildren().add(new Label("Coordinate 2:"));
-        generalBox.getChildren().add(new HexField(2, true));
-        generalHexFields.add((HexField) generalBox.getChildren().get(generalBox.getChildren().size() - 1));
-        generalBox.getChildren().add(new Label("Team:"));
-        generalSpinners.add(new Spinner<>(new SpinnerValueFactory
-                .IntegerSpinnerValueFactory(0, 255)));
-        generalBox.getChildren().add(generalSpinners.get(generalSpinners.size() - 1));
-        generalBox.getChildren().add(new Label("Level:"));
-        generalSpinners.add(new Spinner<>(new SpinnerValueFactory
-                .IntegerSpinnerValueFactory(0, 255)));
-        generalBox.getChildren().add(generalSpinners.get(generalSpinners.size() - 1));
-        generalBox.getChildren().add(new Label("Spawn Bitflags:"));
-        generalBox.getChildren().add(new HexField(4, true));
-        generalHexFields.add((HexField) generalBox.getChildren().get(generalBox.getChildren().size() - 1));
-        generalBox.getChildren().add(new Label("Skill Bitflags:"));
-        generalBox.getChildren().add(new HexField(4, true));
-        generalHexFields.add((HexField) generalBox.getChildren().get(generalBox.getChildren().size() - 1));
         generalBox.getChildren().add(new Label("AI AC:"));
         generalBox.getChildren().add(new TextField());
         generalFields.add((TextField) generalBox.getChildren().get(generalBox.getChildren().size() - 1));
@@ -274,6 +247,18 @@ public class Dispo implements Initializable {
         generalBox.getChildren().add(new Label("MV Parameter:"));
         generalBox.getChildren().add(new TextField());
         generalFields.add((TextField) generalBox.getChildren().get(generalBox.getChildren().size() - 1));
+        generalBox.getChildren().add(new Label("Coordinate 1:"));
+        generalBox.getChildren().add(new HexField(2, true));
+        generalHexFields.add((HexField) generalBox.getChildren().get(generalBox.getChildren().size() - 1));
+        generalBox.getChildren().add(new Label("Coordinate 2:"));
+        generalBox.getChildren().add(new HexField(2, true));
+        generalHexFields.add((HexField) generalBox.getChildren().get(generalBox.getChildren().size() - 1));
+        generalBox.getChildren().add(new Label("Unknown:"));
+        generalBox.getChildren().add(new HexField(4, true));
+        generalHexFields.add((HexField) generalBox.getChildren().get(generalBox.getChildren().size() - 1));
+        generalBox.getChildren().add(new Label("Team and Level:"));
+        generalBox.getChildren().add(new HexField(2, true));
+        generalHexFields.add((HexField) generalBox.getChildren().get(generalBox.getChildren().size() - 1));
         
         itemBox.getChildren().add(new Label("Item 1:"));
         itemBox.getChildren().add(new TextField());
@@ -305,46 +290,7 @@ public class Dispo implements Initializable {
         itemBox.getChildren().add(new Label("Item 5 Bitflags:"));
         itemBox.getChildren().add(new HexField(4, true));
         itemHexFields.add((HexField) itemBox.getChildren().get(itemBox.getChildren().size() - 1));
-
-        skillBox.getChildren().add(new Label("Skill 1:"));
-        skillBox.getChildren().add(new TextField());
-        skillFields.add((TextField) skillBox.getChildren().get(skillBox.getChildren().size() - 1));
-        skillBox.getChildren().add(new Label("Skill 2:"));
-        skillBox.getChildren().add(new TextField());
-        skillFields.add((TextField) skillBox.getChildren().get(skillBox.getChildren().size() - 1));
-        skillBox.getChildren().add(new Label("Skill 3:"));
-        skillBox.getChildren().add(new TextField());
-        skillFields.add((TextField) skillBox.getChildren().get(skillBox.getChildren().size() - 1));
-        skillBox.getChildren().add(new Label("Skill 4:"));
-        skillBox.getChildren().add(new TextField());
-        skillFields.add((TextField) skillBox.getChildren().get(skillBox.getChildren().size() - 1));
-        skillBox.getChildren().add(new Label("Skill 5:"));
-        skillBox.getChildren().add(new TextField());
-        skillFields.add((TextField) skillBox.getChildren().get(skillBox.getChildren().size() - 1));
-        setupAutoComplete();
         addListeners();
-    }
-
-    private void setupAutoComplete() {
-        List<AutoCompletionBinding<String>> bindings = new ArrayList<>();
-        bindings.add(TextFields.bindAutoCompletion(generalFields.get(0),
-                manager.getCharacters().keySet()));
-        for(int x = 0; x < 5; x++) {
-            bindings.add(TextFields.bindAutoCompletion(itemFields.get(x),
-                    manager.getItems().keySet()));
-            bindings.add(TextFields.bindAutoCompletion(skillFields.get(x),
-                    manager.getSkills().keySet()));
-        }
-
-        bindings.get(0).setOnAutoCompleted(event -> generalFields.get(0).setText(
-                manager.getRealEntry(generalFields.get(0).getText())));
-        for(int x = 0; x < 5; x++) {
-            int i = x;
-            bindings.get((x * 2) + 1).setOnAutoCompleted(event -> itemFields.get(i).setText(
-                    manager.getRealEntry(itemFields.get(i).getText())));
-            bindings.get((x * 2) + 2).setOnAutoCompleted(event -> skillFields.get(i).setText(
-                    manager.getRealEntry(skillFields.get(i).getText())));
-        }
     }
 
     private void addListeners() {
@@ -360,7 +306,7 @@ public class Dispo implements Initializable {
         });
         generalFields.get(2).textProperty().addListener((observable, oldValue, newValue) -> {
             if(selectedBlock != null)
-                selectedBlock.setAiPositionOne(newValue);
+                selectedBlock.setAcParam(newValue);
         });
         generalFields.get(3).textProperty().addListener((observable, oldValue, newValue) -> {
             if(selectedBlock != null)
@@ -368,7 +314,7 @@ public class Dispo implements Initializable {
         });
         generalFields.get(4).textProperty().addListener((observable, oldValue, newValue) -> {
             if(selectedBlock != null)
-                selectedBlock.setAiPositionTwo(newValue);
+                selectedBlock.setMiParam(newValue);
         });
         generalFields.get(5).textProperty().addListener((observable, oldValue, newValue) -> {
             if(selectedBlock != null)
@@ -376,7 +322,7 @@ public class Dispo implements Initializable {
         });
         generalFields.get(6).textProperty().addListener((observable, oldValue, newValue) -> {
             if(selectedBlock != null)
-                selectedBlock.setAiPositionThree(newValue);
+                selectedBlock.setAtParam(newValue);
         });
         generalFields.get(7).textProperty().addListener((observable, oldValue, newValue) -> {
             if(selectedBlock != null)
@@ -384,50 +330,38 @@ public class Dispo implements Initializable {
         });
         generalFields.get(8).textProperty().addListener((observable, oldValue, newValue) -> {
             if(selectedBlock != null)
-                selectedBlock.setAiPositionFour(newValue);
+                selectedBlock.setMvParam(newValue);
         });
         generalHexFields.get(0).textProperty().addListener((observable, oldValue, newValue) -> {
             if(selectedBlock != null) {
-                selectedBlock.setFirstCoord(generalHexFields.get(0).getValue());
+                selectedBlock.setCoordOne(generalHexFields.get(0).getValue());
                 updateSelection(factionTree.getSelectionModel().getSelectedItem());
             }
         });
         generalHexFields.get(1).textProperty().addListener((observable, oldValue, newValue) -> {
             if(selectedBlock != null) {
-                selectedBlock.setSecondCoord(generalHexFields.get(1).getValue());
+                selectedBlock.setCoordTwo(generalHexFields.get(1).getValue());
                 updateSelection(factionTree.getSelectionModel().getSelectedItem());
             }
         });
         generalHexFields.get(2).textProperty().addListener((observable, oldValue, newValue) -> {
             if(selectedBlock != null)
-                selectedBlock.setSpawnBitflags(generalHexFields.get(2).getValue());
+                selectedBlock.setUnknown(generalHexFields.get(2).getValue());
         });
         generalHexFields.get(3).textProperty().addListener((observable, oldValue, newValue) -> {
             if(selectedBlock != null)
-                selectedBlock.setSkillFlag(generalHexFields.get(3).getValue());
-        });
-        generalSpinners.get(0).valueProperty().addListener((observable, oldValue, newValue) -> {
-            if(selectedBlock != null)
-                selectedBlock.setTeam(generalSpinners.get(0).getValue().byteValue());
-        });
-        generalSpinners.get(1).valueProperty().addListener((observable, oldValue, newValue) -> {
-            if(selectedBlock != null)
-                selectedBlock.setLevel(generalSpinners.get(1).getValue().byteValue());
+                selectedBlock.setUnknownTwo(generalHexFields.get(3).getValue());
         });
 
         for(int x = 0; x < 5; x++) {
             int i = x;
             itemFields.get(x).textProperty().addListener((observable, oldValue, newValue) -> {
                 if(selectedBlock != null)
-                    selectedBlock.setItem(newValue, i);
+                    selectedBlock.setItem(i, newValue);
             });
             itemHexFields.get(x).textProperty().addListener((observable, oldValue, newValue) -> {
                 if(selectedBlock != null)
                     selectedBlock.getItemBitflags()[i] = itemHexFields.get(i).getValue();
-            });
-            skillFields.get(x).textProperty().addListener((observable, oldValue, newValue) -> {
-                if(selectedBlock != null)
-                    selectedBlock.setSkill(newValue, i);
             });
         }
     }
@@ -435,19 +369,17 @@ public class Dispo implements Initializable {
     private void updateFields() {
         generalFields.get(0).setText(selectedBlock.getPid());
         generalFields.get(1).setText(selectedBlock.getAc());
-        generalFields.get(2).setText(selectedBlock.getAiPositionOne());
+        generalFields.get(2).setText(selectedBlock.getAcParam());
         generalFields.get(3).setText(selectedBlock.getMi());
-        generalFields.get(4).setText(selectedBlock.getAiPositionTwo());
+        generalFields.get(4).setText(selectedBlock.getMiParam());
         generalFields.get(5).setText(selectedBlock.getAt());
-        generalFields.get(6).setText(selectedBlock.getAiPositionThree());
+        generalFields.get(6).setText(selectedBlock.getAtParam());
         generalFields.get(7).setText(selectedBlock.getMv());
-        generalFields.get(8).setText(selectedBlock.getAiPositionFour());
-        generalHexFields.get(0).setValue(selectedBlock.getFirstCoord());
-        generalHexFields.get(1).setValue(selectedBlock.getSecondCoord());
-        generalHexFields.get(2).setValue(selectedBlock.getSpawnBitflags());
-        generalHexFields.get(3).setValue(selectedBlock.getSkillFlag());
-        generalSpinners.get(0).getValueFactory().setValue((int) selectedBlock.getTeam());
-        generalSpinners.get(1).getValueFactory().setValue((int) selectedBlock.getLevel());
+        generalFields.get(8).setText(selectedBlock.getMvParam());
+        generalHexFields.get(0).setValue(selectedBlock.getCoordOne());
+        generalHexFields.get(1).setValue(selectedBlock.getCoordTwo());
+        generalHexFields.get(2).setValue(selectedBlock.getUnknown());
+        generalHexFields.get(3).setValue(selectedBlock.getUnknownTwo());
 
         itemFields.get(0).setText(selectedBlock.getItems()[0]);
         itemFields.get(1).setText(selectedBlock.getItems()[1]);
@@ -459,20 +391,14 @@ public class Dispo implements Initializable {
         itemHexFields.get(2).setValue(selectedBlock.getItemBitflags()[2]);
         itemHexFields.get(3).setValue(selectedBlock.getItemBitflags()[3]);
         itemHexFields.get(4).setValue(selectedBlock.getItemBitflags()[4]);
-
-        skillFields.get(0).setText(selectedBlock.getSkills()[0]);
-        skillFields.get(1).setText(selectedBlock.getSkills()[1]);
-        skillFields.get(2).setText(selectedBlock.getSkills()[2]);
-        skillFields.get(3).setText(selectedBlock.getSkills()[3]);
-        skillFields.get(4).setText(selectedBlock.getSkills()[4]);
     }
 
     private void populateTree() {
         TreeItem<String> rootItem = new TreeItem<>(FileData.getInstance().getOriginal().getName());
         rootItem.setExpanded(true);
-        for (DispoFaction f : file.getFactions()) {
+        for (ADispoFaction f : file.getFactions()) {
             TreeItem<String> faction = new TreeItem<>(f.getName());
-            for (DispoBlock b : f.getSpawns()) {
+            for (ADispoBlock b : f.getSpawns()) {
                 TreeItem<String> block = new TreeItem<>(b.getPid());
                 faction.getChildren().add(block);
             }
@@ -486,16 +412,16 @@ public class Dispo implements Initializable {
     private void updateOccupiedCoords() {
         for (Node n : dispoGrid.getChildren())
             n.setId("dispoGrid");
-        for (DispoFaction f : file.getFactions()) {
-            for (DispoBlock b : f.getSpawns()) {
+        for (ADispoFaction f : file.getFactions()) {
+            for (ADispoBlock b : f.getSpawns()) {
                 int x;
                 int y;
                 if (coordCheck.isSelected()) {
-                    x = b.getSecondCoord()[0];
-                    y = b.getSecondCoord()[1];
+                    x = b.getCoordTwo()[0];
+                    y = b.getCoordTwo()[1];
                 } else {
-                    x = b.getFirstCoord()[0];
-                    y = b.getFirstCoord()[1];
+                    x = b.getCoordOne()[0];
+                    y = b.getCoordOne()[1];
                 }
                 if (x > 0 && x < 32 && y > 0 && y < 32)
                     dispoRegion[x][y].setId("occupiedCoord");
@@ -506,18 +432,18 @@ public class Dispo implements Initializable {
     private void updateOccupiedCoords(String factionName) {
         for (Node n : dispoGrid.getChildren())
             n.setId("dispoGrid");
-        for (DispoFaction f : file.getFactions()) {
+        for (ADispoFaction f : file.getFactions()) {
             if (factionName.equals(f.getName()))
                 selectedFaction = f;
-            for (DispoBlock b : f.getSpawns()) {
+            for (ADispoBlock b : f.getSpawns()) {
                 int x;
                 int y;
                 if (coordCheck.isSelected()) {
-                    x = b.getSecondCoord()[0];
-                    y = b.getSecondCoord()[1];
+                    x = b.getCoordTwo()[0];
+                    y = b.getCoordTwo()[1];
                 } else {
-                    x = b.getFirstCoord()[0];
-                    y = b.getFirstCoord()[1];
+                    x = b.getCoordOne()[0];
+                    y = b.getCoordOne()[1];
                 }
                 if (factionName.equals(f.getName())) {
                     if (x > 0 && x < 32 && y > 0 && y < 32)
@@ -553,22 +479,22 @@ public class Dispo implements Initializable {
 
     private void setSelectedSpawn(TreeItem<String> faction, TreeItem<String> spawn) {
         int factionIndex = -1;
-        for (DispoFaction f : file.getFactions()) {
+        for (ADispoFaction f : file.getFactions()) {
             if (f.getName().equals(faction.getValue()))
                 factionIndex = file.getFactions().indexOf(f);
         }
         int blockIndex = faction.getChildren().indexOf(spawn);
 
-        DispoBlock block = file.getFactions().get(factionIndex).getSpawns().get(blockIndex);
+        ADispoBlock block = file.getFactions().get(factionIndex).getSpawns().get(blockIndex);
 
         if (coordCheck.isSelected()) {
-            if (block.getSecondCoord()[0] > 0 && block.getSecondCoord()[1] < 32 && block.getSecondCoord()[1] > 0 
-                    && block.getSecondCoord()[1] < 32)
-                dispoRegion[block.getSecondCoord()[0]][block.getSecondCoord()[1]].setId("selectedBlock");
+            if (block.getCoordTwo()[0] > 0 && block.getCoordTwo()[1] < 32 && block.getCoordTwo()[1] > 0 
+                    && block.getCoordTwo()[1] < 32)
+                dispoRegion[block.getCoordTwo()[0]][block.getCoordTwo()[1]].setId("selectedBlock");
         } else {
-            if (block.getFirstCoord()[0] > 0 && block.getFirstCoord()[1] < 32 && block.getFirstCoord()[1] > 0
-                    && block.getFirstCoord()[1] < 32)
-                dispoRegion[block.getFirstCoord()[0]][block.getFirstCoord()[1]].setId("selectedBlock");
+            if (block.getCoordOne()[0] > 0 && block.getCoordOne()[1] < 32 && block.getCoordOne()[1] > 0
+                    && block.getCoordOne()[1] < 32)
+                dispoRegion[block.getCoordOne()[0]][block.getCoordOne()[1]].setId("selectedBlock");
         }
 
         selectedBlock = block;
@@ -577,9 +503,9 @@ public class Dispo implements Initializable {
     private void moveBlock(int x, int y) {
         if (selectedBlock != null && selectedFaction != null) {
             if (coordCheck.isSelected())
-                selectedBlock.setSecondCoord(new byte[]{(byte) x, (byte) y});
+                selectedBlock.setCoordTwo(new byte[]{(byte) x, (byte) y});
             else
-                selectedBlock.setFirstCoord(new byte[]{(byte) x, (byte) y});
+                selectedBlock.setCoordOne(new byte[]{(byte) x, (byte) y});
 
             // Prompt the tree to reload the selection at the new coordinate.
             updateSelection(factionTree.getSelectionModel().getSelectedItem());
@@ -591,10 +517,6 @@ public class Dispo implements Initializable {
             t.clear();
         for(TextField t : itemFields)
             t.clear();
-        for(TextField t : skillFields)
-            t.clear();
-        for(Spinner<Integer> s : generalSpinners)
-            s.getValueFactory().setValue(0);
     }
 
     private void throwNameInUseDialog() {

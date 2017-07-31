@@ -1,22 +1,22 @@
-package fefeditor.common.inject
+package fefeditor.bin
 
 import java.io.File
 import java.nio.file.{Files, Paths}
 
-import fefeditor.bin.blocks.{CharSupport, SupportCharacter}
 import fefeditor.common.io.ArrayUtils
 
-import scala.collection.mutable.{Buffer, ListBuffer}
+import scala.collection.mutable
+import scala.collection.mutable.ListBuffer
 
-class SupportBinDLC(file: File)
+class SupportBin(file: File)
 {
-  private var data: Buffer[Byte] = _
-  private var ptrOne: Buffer[Byte] = _
-  private var ptrTwo: Buffer[Byte] = _
-  private var labels: Buffer[Byte] = _
+  private var data: mutable.Buffer[Byte] = _
+  private var ptrOne: mutable.Buffer[Byte] = _
+  private var ptrTwo: mutable.Buffer[Byte] = _
+  private var labels: mutable.Buffer[Byte] = _
 
   private var tableStart = 0
-  private var _offsets: Buffer[Int] = _
+  private var _offsets: mutable.Buffer[Int] = _
 
   processHeader()
 
@@ -37,41 +37,17 @@ class SupportBinDLC(file: File)
     labels = raw.slice(labelStart, raw.length).toBuffer
 
     val temp = data.toArray
-    tableStart = ArrayConvert.toInteger(temp.slice(0x8, 0xC))
-    _offsets = offsets
+    val charTable = ArrayConvert.toInteger(temp.slice(0x8, 0xC))
+    tableStart = ArrayConvert.toInteger(temp.slice(charTable + 0x8, charTable + 0xC))
   }
 
-  def offsets: Buffer[Int] = {
+  def offsets: mutable.Buffer[Int] = {
     val temp = data.toArray
-    val offsets = Buffer.empty[Int]
+    val offsets = mutable.Buffer.empty[Int]
     for(x <- 0 until ArrayConvert.toInteger(temp.slice(tableStart, tableStart + 0x4))) {
       offsets.append(ArrayConvert.toInteger(temp.slice(tableStart + 4 + 4 * x, tableStart + 8 + 4 * x)))
     }
     offsets
-  }
-
-  def containsCharacter(character: SupportCharacter): Boolean = {
-    val temp = data.toArray
-    var result = false
-    for(i <- offsets) {
-      val id = ArrayConvert.toInteger(temp.slice(i, i + 2))
-      if(id == character.getSupportId) {
-        result = true
-      }
-    }
-    result
-  }
-
-  def getTableOffset(character: SupportCharacter): Int = {
-    val temp = data.toArray
-    var result = -1
-    for(i <- offsets) {
-      val id = ArrayConvert.toInteger(temp.slice(i, i + 2))
-      if(id == character.getSupportId) {
-        result = i
-      }
-    }
-    result
   }
 
   def supportTableLength: Int = {
@@ -88,7 +64,7 @@ class SupportBinDLC(file: File)
 
   def changeSupportType(character: SupportCharacter, index: Int, supportType: Int): Unit = {
     val temp = data.toArray
-    val tableOffset = getTableOffset(character)
+    val tableOffset = offsets(character.getSupportId)
     val typeOffset = tableOffset + 0xC * index + 8
     var bytes: Array[Byte] = null
     if(supportType == 0)
@@ -105,7 +81,7 @@ class SupportBinDLC(file: File)
 
   def getSupports(character: SupportCharacter): Array[CharSupport] = {
     val temp = data.toArray
-    val tableOffset = getTableOffset(character)
+    val tableOffset = offsets(character.getSupportId)
     val tableSize = ArrayUtils.getUInt16(temp, tableOffset + 2)
     val supports = Array.tabulate[CharSupport](tableSize)(n => {
       val charSupport = new CharSupport
@@ -123,13 +99,6 @@ class SupportBinDLC(file: File)
 
   private def fileSize = 0x20 + data.length + ptrOne.length + ptrTwo.length + labels.length
 
-  def replaceLabels(name: String): Unit = {
-    val bytes = name.getBytes("shift-jis")
-    labels.clear()
-    labels.appendAll(bytes)
-    labels.append(0)
-  }
-
   def toBin: Array[Byte] = {
     val out: ListBuffer[Byte] = ListBuffer()
     out.appendAll(ArrayConvert.toByteArray(fileSize))
@@ -146,7 +115,7 @@ class SupportBinDLC(file: File)
 
   def addSupport(character: SupportCharacter, bytes: Array[Byte]): Unit = {
     val temp = data.toArray
-    val tableOffset = getTableOffset(character)
+    val tableOffset = offsets(character.getSupportId)
     val tableSize = ArrayUtils.getUInt16(temp, tableOffset + 2)
     val insertOffset = tableOffset + 0x4 + tableSize * 0xC
 
@@ -197,7 +166,7 @@ class SupportBinDLC(file: File)
     }
   }
 
-  def addSupportTable(bytes: Array[Byte]): Unit = {
+  def addSupportTable(bytes: Array[Byte], supportId: Short, blockStart: Int): Unit = {
     val temp = data.toArray
     val tableOffset = offsets.last
     val tableSize = ArrayUtils.getUInt16(temp, tableOffset + 2)
@@ -253,6 +222,12 @@ class SupportBinDLC(file: File)
 
     // Add character to main table.
     fixSupportTable(insertOffset + 4)
+
+    // Add support ID to character block.
+    val supportIdBytes = ArrayConvert.toByteArray(supportId)
+    for(y <- 0 until 2) {
+      data(blockStart + 48 + y) = supportIdBytes(y)
+    }
   }
 
   private def fixSupportTable(tableOffset: Int): Unit = {
@@ -312,6 +287,7 @@ class SupportBinDLC(file: File)
       }
     }
 
+    // Update support table size.
     val tableSize = ArrayConvert.toInteger(data.toArray.slice(tableStart, tableStart + 4))
     val sizeBytes = ArrayConvert.toByteArray(tableSize + 1)
     for(x <- sizeBytes.indices) {

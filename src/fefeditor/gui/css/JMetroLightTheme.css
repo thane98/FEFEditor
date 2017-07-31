@@ -707,7 +707,7 @@
  ******************************************************************************/
 
 .slider {
-    -fx-skin: "fefeditor.gui.jmetro.FilledSliderSkin";
+    -fx-skin: "fefeditor.gui.css.FilledSliderSkin";
 }
 
 .slider .thumb {
@@ -1035,5 +1035,51 @@
     -fx-opacity: 1;
     -fx-background-color: #d9d9d9, #eaeaea;
     -fx-text-fill: #adadad;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Tab Pane                                                                    *
+ *                                                                             *
+ ******************************************************************************/
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+
+.tab-pane {
+    -fx-tab-min-width:90px;
+}
+
+.tab {
+    -fx-background-insets: 0 1 0 1,0,0;
+}
+.tab-pane .tab {
+    -fx-background-color: #e6e6e6;
+
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: #3c3c3c;
+}
+
+.tab .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #828282;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: white;
+}
+
+.tab-pane:top *.tab-header-area {
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.416667em 0.166667em 0.0em 0.0em;
+}
+
+.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+    -fx-border-color: transparent;
 }
 

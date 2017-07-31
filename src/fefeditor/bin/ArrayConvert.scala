@@ -1,4 +1,4 @@
-package fefeditor.common.inject
+package fefeditor.bin
 
 import java.nio.{ByteBuffer, ByteOrder}
 

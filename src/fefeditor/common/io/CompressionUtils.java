@@ -186,15 +186,15 @@ public class CompressionUtils
 	 */
 	public static byte[] makeMessageArchive(String[] lines) {
 		try {
-			int stringCount = lines.length - 6;
+			int stringCount = lines.length - 4;
 			String[] messages = new String[stringCount];
 			String[] names = new String[stringCount];
 			int[] mPos = new int[stringCount];
 			int[] nPos = new int[stringCount];
-			for (int i = 6; i < lines.length; i++) {
+			for (int i = 4; i < lines.length; i++) {
 				int ind = lines[i].indexOf(": ");
-				names[i - 6] = lines[i].substring(0, ind);
-				messages[i - 6] = lines[i].substring(ind + 2).replace("\\n", "\n")
+				names[i - 4] = lines[i].substring(0, ind);
+				messages[i - 4] = lines[i].substring(ind + 2).replace("\\n", "\n")
 						.replace("\\r", "\r");
 			}
 			byte[] header = new byte[0x20];

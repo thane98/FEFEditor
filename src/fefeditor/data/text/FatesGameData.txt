@@ -1,0 +1,1130 @@
+MPID_不明: Outrealmer
+MPID_デフォルト名: Corrin
+MPID_ギュンター: Gunter
+MPID_フェリシア: Felicia
+MPID_ジョーカー: Jakob
+MPID_リンカ: Rinkah
+MPID_スズカゼ: Kaze
+MPID_サクラ: Sakura
+MPID_アクア: Azura
+MPID_カザハナ: Hana
+MPID_ツバキ: Subaki
+MPID_サイラス: Silas
+MPID_サイゾウ: Saizo
+MPID_オロチ: Orochi
+MPID_ヒノカ: Hinoka
+MPID_アサマ: Azama
+MPID_セツナ: Setsuna
+MPID_ツクヨミ: Hayato
+MPID_オボロ: Oboro
+MPID_ヒナタ: Hinata
+MPID_タクミ: Takumi
+MPID_カゲロウ: Kagero
+MPID_ユウギリ: Reina
+MPID_ニシキ: Kaden
+MPID_リョウマ: Ryoma
+MPID_クリムゾン: Scarlet
+MPID_アシュラ: Shura
+MPID_エリーゼ: Elise
+MPID_ハロルド: Arthur
+MPID_エルフィ: Effie
+MPID_オーディン: Odin
+MPID_ゼロ: Niles
+MPID_ニュクス: Nyx
+MPID_カミラ: Camilla
+MPID_ルーナ: Selena
+MPID_ベルカ: Beruka
+MPID_ラズワルド: Laslow
+MPID_ピエリ: Peri
+MPID_ブノワ: Benny
+MPID_シャーロッテ: Charlotte
+MPID_レオン: Leo
+MPID_フランネル: Keaton
+MPID_マークス: Xander
+MPID_イザナ: Izana
+MPID_ドラジェ: Candace
+MPID_ユキムラ: Yukimura
+MPID_フローラ: Flora
+MPID_ナハト: Nichol
+MPID_モズメ: Mozu
+MPID_カンナ: Kana
+MPID_シグレ: Shigure
+MPID_ディーア: Dwyer
+MPID_ゾフィー: Sophie
+MPID_ミドリコ: Midori
+MPID_シノノメ: Shiro
+MPID_キサラギ: Kiragi
+MPID_グレイ: Asugi
+MPID_キヌ: Selkie
+MPID_ヒサメ: Hisame
+MPID_ミタマ: Mitama
+MPID_マトイ: Caeldori
+MPID_シャラ: Rhajat
+MPID_ジークベルト: Siegbert
+MPID_フォレオ: Forrest
+MPID_イグニス: Ignatius
+MPID_ベロア: Velouria
+MPID_ルッツ: Percy
+MPID_オフェリア: Ophelia
+MPID_ソレイユ: Soleil
+MPID_エポニーヌ: Nina
+MPID_アンナ: Anna
+MPID_フウガ: Fuga
+MPID_ガンズ: Hans
+MPID_マクベス: Iago
+MPID_ガロン: Garon
+MPID_コタロウ: Kotaro
+MPID_ゾーラ: Zola
+MPID_スメラギ: Sumeragi
+MPID_シェンメイ: Arete
+MPID_ミコト: Mikoto
+MPID_ハイドラ: Anankos
+MPID_モズ: Omozu
+MPID_ダニエラ: Daniela
+MPID_ハイタカ: Haitaka
+MPID_クマゲラ: Kumagera
+MPID_ウィリアム: Lloyd
+MPID_ホルモン: Llewelyn
+MPID_ガザック: Gazak
+MPID_バンバ: Tarba
+MPID_ファンク: Funke
+MPID_ダイチ: Daichi
+MPID_セノウ: Senno
+MPID_ヴァスハラ: Zhara
+MPID_クーリア: Kilma
+MPID_写し身: Replica
+MPID_CASTLE_白村人男: Shopkeep
+MPID_CASTLE_白村人女: Shopkeep
+MPID_CASTLE_黒村人男: Shopkeep
+MPID_CASTLE_黒村人女: Shopkeep
+MPID_その他: Other
+MPID_白夜兵: Hoshidan
+MPID_暗夜兵: Nohrian
+MPID_透魔兵: Vallite
+MPID_フウマ兵: Mokushujin
+MPID_イズモ兵: Izumite
+MPID_シュヴァリエ兵: Chevois
+MPID_反乱兵: Resistance
+MPID_幻影兵: Illusion
+MPID_部族兵: Tribalist
+MPID_異邦の兵: Foreigner
+MPID_謎の兵: Invader
+MPID_賊: Ruffian
+MPID_村人: Villager
+MPID_魔物: Monster
+MPID_傭兵団: Mercenary
+MPID_花売り: Flower Girl
+MPID_絆_白白_01: Gin
+MPID_絆_白白_02: Azuki
+MPID_絆_白白_03: Hakuto
+MPID_絆_白白_04: Kureha
+MPID_絆_白白_05: Sango
+MPID_絆_白白_06: Himawari
+MPID_絆_白白_07: Kogane
+MPID_絆_白白_08: Ai
+MPID_絆_白白_09: Tetsu
+MPID_絆_白白_10: Tokiwa
+MPID_絆_白白_11: Suzaku
+MPID_絆_白白_12: Chigusa
+MPID_絆_白白_13: Renga
+MPID_絆_白白_14: Moegi
+MPID_絆_白白_15: Kohaku
+MPID_絆_白白_16: Murasaki
+MPID_絆_白白_17: Momotaro
+MPID_絆_白白_18: Sumire
+MPID_絆_黒黒_01: Rusty
+MPID_絆_黒黒_02: Amber
+MPID_絆_黒黒_03: Auburn
+MPID_絆_黒黒_04: Coral
+MPID_絆_黒黒_05: Hunter
+MPID_絆_黒黒_06: Hazel
+MPID_絆_黒黒_07: Cyan
+MPID_絆_黒黒_08: Fuchsia
+MPID_絆_黒黒_09: Jett
+MPID_絆_黒黒_10: Olive
+MPID_絆_黒黒_11: Slate
+MPID_絆_黒黒_12: Violet
+MPID_絆_黒黒_13: Sterling
+MPID_絆_黒黒_14: Ruby
+MPID_絆_黒黒_15: Tanner
+MPID_絆_黒黒_16: Kelly
+MPID_絆_黒黒_17: Teale
+MPID_絆_黒黒_18: Magenta
+MPID_絆_白黒_01: Naoki
+MPID_絆_白黒_02: Shizuku
+MPID_絆_白黒_03: Kaito
+MPID_絆_白黒_04: Wakaba
+MPID_絆_白黒_05: Yukio
+MPID_絆_白黒_06: Ibuki
+MPID_絆_白黒_07: Riku
+MPID_絆_白黒_08: Hibari
+MPID_絆_白黒_09: Minato
+MPID_絆_白黒_10: Aspen
+MPID_絆_白黒_11: Cypress
+MPID_絆_白黒_12: Daisy
+MPID_絆_白黒_13: Thorn
+MPID_絆_白黒_14: Primrose
+MPID_絆_白黒_15: Quill
+MPID_絆_白黒_16: Willow
+MPID_絆_白黒_17: Flint
+MPID_絆_白黒_18: Sequoia
+MPID_絆_白透_01: Shoga
+MPID_絆_白透_02: Anzu
+MPID_絆_白透_03: Inaho
+MPID_絆_白透_04: Yuzu
+MPID_絆_白透_05: Mugi
+MPID_絆_白透_06: Umeko
+MPID_絆_白透_07: Nori
+MPID_絆_白透_08: Kurumi
+MPID_絆_白透_09: Naruto
+MPID_絆_白透_10: Ringo
+MPID_絆_白透_11: Shoya
+MPID_絆_白透_12: Kiku
+MPID_絆_白透_13: Katsuo
+MPID_絆_白透_14: Ayu
+MPID_絆_白透_15: Takeshi
+MPID_絆_白透_16: Mizuna
+MPID_絆_白透_17: Koumei
+MPID_絆_白透_18: Shiori
+MPID_絆_黒透_01: Sorrel
+MPID_絆_黒透_02: Rosemary
+MPID_絆_黒透_03: Bay
+MPID_絆_黒透_04: Anise
+MPID_絆_黒透_05: Saffron
+MPID_絆_黒透_06: Pepper
+MPID_絆_黒透_07: Basil
+MPID_絆_黒透_08: Ginger
+MPID_絆_黒透_09: Clove
+MPID_絆_黒透_10: Mint
+MPID_絆_黒透_11: Caraway
+MPID_絆_黒透_12: Thyme
+MPID_絆_黒透_13: Sage
+MPID_絆_黒透_14: Cassia
+MPID_絆_黒透_15: Dillan
+MPID_絆_黒透_16: Lavender
+MPID_絆_黒透_17: Fenn
+MPID_絆_黒透_18: Perilla
+MPID_絆_透透_01: Dimitri
+MPID_絆_透透_02: Alexa
+MPID_絆_透透_03: Galen
+MPID_絆_透透_04: Althaea
+MPID_絆_透透_05: Damien
+MPID_絆_透透_06: Jacynth
+MPID_絆_透透_07: Orion
+MPID_絆_透透_08: Sophia
+MPID_絆_透透_09: George
+MPID_絆_透透_10: Eva
+MPID_絆_透透_11: Theo
+MPID_絆_透透_12: Helene
+MPID_絆_透透_13: Spiro
+MPID_絆_透透_14: Odele
+MPID_絆_透透_15: Peter
+MPID_絆_透透_16: Rhoda
+MPID_絆_透透_17: Lukas
+MPID_絆_透透_18: Charis
+MPID_リリス: Lilith
+MPID_リリス竜: Lilith
+MPID_ゴーレムＡ: Golem A
+MPID_ゴーレムＢ: Golem B
+MPID_ゴーレムＣ: Golem C
+MPID_絡繰人形・甲: Puppet A
+MPID_絡繰人形・乙: Puppet B
+MPID_絡繰人形・丙: Puppet C
+MPID_闘技者: Opponent
+MPID_ララ: Layla
+MPID_ロンタオ: Anthony
+MPID_村人おじいさん白: Old Man
+MPID_村人おばさん白: Old Woman
+MPID_村人お姉さん白: Girl
+MPID_村人お兄さん白: Boy
+MPID_村人子供白: Child
+MPID_村人おじいさん黒: Old Man
+MPID_村人おばさん黒: Old Woman
+MPID_村人お姉さん黒: Girl
+MPID_村人お兄さん黒: Boy
+MPID_村人子供黒: Child
+MPID_ノスフェラトゥ: Faceless
+MPID_ゴーレム: Stoneborn
+MPID_妖狐: Kitsune
+MPID_ガルー: Wolfskin
+MPID_忍: Ninja
+MPID_虹の賢者: Rainbow Sage
+MPID_カシータ: Cassita
+MPID_フードマン: ???
+MPID_マルス: Marth
+MPID_アイク: Ike
+MPID_ルキナ: Lucina
+MPID_ルフレ: Robin
+MPID_？？？: ???
+MCID_Z000: To the Deciding Moment
+MCID_A000: Ties That Bind
+MCID_A001: Nohr
+MCID_A002: Gift of Ganglari
+MCID_A003: Journey Begins
+MCID_A004: Hoshido
+MCID_A005: Mother
+MCID_P006: The Path Is Yours
+MCID_A006: In the White Light
+MCID_A007: A Vow Upheld
+MCID_A008: Fierce Winds
+MCID_A009: Land of Gods
+MCID_A010: Ninja Village
+MCID_A011: To the Sea
+MCID_A012: Dark Reunion
+MCID_A013: Another Hope
+MCID_A014: Light Scatters
+MCID_A015: Wolfskin Peak
+MCID_A016: Pleasure Palace
+MCID_A017: Lost in the Ice
+MCID_A018: Leo
+MCID_A019: Rainbow Sage
+MCID_A020: Fort Dragonfall
+MCID_A021: Burning Falls
+MCID_A022: Hidden Capital
+MCID_A023: Camilla
+MCID_A024: Tears of a Dragon
+MCID_A025: Traitor Revealed
+MCID_A026: Xander
+MCID_A027: King Garon
+MCID_A028: Dawn Breaks
+MCID_B006: Embrace the Dark
+MCID_B007: A Dragon's Decree
+MCID_B008: Cold Reception
+MCID_B009: Another Trial
+MCID_B010: Unhappy Reunion
+MCID_B011: Rainbow Sage
+MCID_B012: Bitter Intrigue
+MCID_B013: Uprising
+MCID_B014: Voice of Paradise
+MCID_B015: The Black Pillar
+MCID_B016: Invasion
+MCID_B017: Den of Betrayal
+MCID_B018: Black & White
+MCID_B019: Kitsune Lair
+MCID_B020: Winds of Change
+MCID_B021: Eternal Stairway
+MCID_B022: Sakura
+MCID_B023: Possessed
+MCID_B024: Hinoka
+MCID_B025: Ryoma
+MCID_B026: Treason
+MCID_B027: The Empty King
+MCID_B028: Night Breaks Through
+MCID_C006: Into the Ground
+MCID_C007: Unspeakable World
+MCID_C008: Traitor's Brand
+MCID_C009: Wanderer
+MCID_C010: Voice of a God
+MCID_C011: Mutual Enemies
+MCID_C012: Frozen Sea
+MCID_C013: A Lost Peace
+MCID_C014: Orders
+MCID_C015: Rainbow Sage
+MCID_C016: White Flames
+MCID_C017: Black Flames
+MCID_C018: Veiled Kingdom
+MCID_C019: Hidden Strings
+MCID_C020: Seeds of Doubt
+MCID_C021: Going Forward
+MCID_C022: Memories
+MCID_C023: Arete Undone
+MCID_C024: Days Lost
+MCID_C025: Blades Drawn
+MCID_C026: The Vallite King
+MCID_C027: Hear My Cry
+MCID_C028: Anankos
+MCID_X001: Tragic Start
+MCID_X002: Dragon Blood
+MCID_X003: Surprise Duet
+MCID_X004: Fight or Flight
+MCID_X005: Bold Approach
+MCID_X006: Herbal Remedy
+MCID_X007: Father & Liege
+MCID_X008: A Great Hunt
+MCID_X009: Saizo vs. Saizo
+MCID_X010: Hunter & Prey
+MCID_X011: A Long Grudge
+MCID_X012: Sweet Dreams
+MCID_X013: Truly Talented
+MCID_X014: After the End
+MCID_X015: Hidden Bravery
+MCID_X016: Abducted
+MCID_X017: Two Defenders
+MCID_X018: Nutty Family
+MCID_X019: Great Heroism
+MCID_X020: Ultimate Power
+MCID_X021: Bright Smile
+MCID_X022: Abrupt Clash
+MCID_AY01: Castle
+MCID_AY02: Castle
+MCID_AY03: Castle
+MCID_BY01: Castle
+MCID_BY02: Castle
+MCID_BY03: Castle
+MCID_CY01: Castle
+MCID_CY02: Castle
+MCID_CY03: Castle
+MCID_M001: Hero-King Marth
+MCID_M002: Radiant Hero Ike
+MCID_M003: Princess Lucina
+MCID_M004: Grandmaster Robin
+MCID_CASTLE: Castle
+MJID_不明: Outrealm Class
+MJID_ダークブラッド: Nohr Noble
+MJID_ダークプリンス: Nohr Prince
+MJID_ダークプリンセス: Nohr Princess
+MJID_白の血族: Hoshido Noble
+MJID_パラディン: Paladin
+MJID_ソシアルナイト: Cavalier
+MJID_グレートナイト: Great Knight
+MJID_アーマーナイト: Knight
+MJID_ジェネラル: General
+MJID_バーサーカー: Berserker
+MJID_アクスファイター: Fighter
+MJID_ブレイブヒーロー: Hero
+MJID_マーシナリー: Mercenary
+MJID_ボウナイト: Bow Knight
+MJID_シーフ: Outlaw
+MJID_アドベンチャラー: Adventurer
+MJID_剣聖: Swordmaster
+MJID_侍: Samurai
+MJID_兵法者: Master of Arms
+MJID_修羅: Oni Chieftain
+MJID_鬼人: Oni Savage
+MJID_鍛冶: Blacksmith
+MJID_槍聖: Spear Master
+MJID_槍術士: Spear Fighter
+MJID_婆娑羅: Basara
+MJID_呪い師: Diviner
+MJID_陰陽師: Onmyoji
+MJID_修験者: Monk
+MJID_巫女: Shrine Maiden
+MJID_山伏: Great Master
+MJID_戦巫女: Priestess
+MJID_聖天馬武者: Falcon Knight
+MJID_天馬武者: Sky Knight
+MJID_金鵄武者: Kinshi Knight
+MJID_弓使い: Archer
+MJID_弓聖: Sniper
+MJID_ドラゴンマスター: Wyvern Lord
+MJID_ドラゴンナイト: Wyvern Rider
+MJID_レヴナントナイト: Malig Knight
+MJID_上忍: Master Ninja
+MJID_忍: Ninja
+MJID_絡繰師: Mechanist
+MJID_薬商人: Apothecary
+MJID_大商人: Merchant
+MJID_ソーサラー: Sorcerer
+MJID_ダークマージ: Dark Mage
+MJID_ダークナイト: Dark Knight
+MJID_ストラテジスト: Strategist
+MJID_ロッドナイト: Troubadour
+MJID_バトラー: Butler
+MJID_メイド: Maid
+MJID_ガルー: Wolfskin
+MJID_マーナガルム: Wolfssegner
+MJID_妖狐: Kitsune
+MJID_九尾の狐: Nine-Tails
+MJID_歌姫: Songstress
+MJID_村人: Villager
+MJID_ランサー: Lancer
+MJID_ノスフェラトゥ: Faceless
+MJID_ゴーレム: Stoneborn
+MJID_絡繰人形: Automaton
+MJID_ダークロード: Nohrian King
+MJID_竜: Feral Dragon
+MJID_星竜: Astral Dragon
+MJID_暗夜竜: Blight Dragon
+MJID_透魔竜: Silent Dragon
+MJID_水の眷属: Empty Vessel
+MJID_魔戦士: Dread Fighter
+MJID_ダークペガサス: Dark Falcon
+MJID_シューター: Ballistician
+MJID_魔女: Witch
+MJID_スターロード: Lodestar
+MJID_ヴァンガード: Vanguard
+MJID_マスターロード: Great Lord
+MJID_神軍師: Grandmaster
+MJID_ダミー: DUMMY
+MSEID_不明: Outrealm Skill
+MSEID_無し: None
+MSEID_最大HP+5: HP +5
+MSEID_力+2: Strength +2
+MSEID_魔力+2: Magic +2
+MSEID_技+2: Skill +2
+MSEID_速さ+2: Speed +2
+MSEID_幸運+4: Luck +4
+MSEID_守備+2: Defense +2
+MSEID_魔防+2: Resistance +2
+MSEID_移動+1: Movement +1
+MSEID_竜呪: Draconic Hex
+MSEID_力封じ: Seal Strength
+MSEID_魔力封じ: Seal Magic
+MSEID_速さ封じ: Seal Speed
+MSEID_守備封じ: Seal Defense
+MSEID_魔防封じ: Seal Resistance
+MSEID_力の叫び: Rally Strength
+MSEID_魔力の叫び: Rally Magic
+MSEID_技の叫び: Rally Skill
+MSEID_速さの叫び: Rally Speed
+MSEID_幸運の叫び: Rally Luck
+MSEID_守備の叫び: Rally Defense
+MSEID_魔防の叫び: Rally Resistance
+MSEID_移動の叫び: Rally Movement
+MSEID_特別な歌: Inspiring Song
+MSEID_滅殺: Lethality
+MSEID_流星: Astra
+MSEID_竜穿: Dragon Fang
+MSEID_太陽: Sol
+MSEID_月光: Luna
+MSEID_破天: Rend Heaven
+MSEID_復讐: Vengeance
+MSEID_大盾: Pavise
+MSEID_聖盾: Aegis
+MSEID_竜盾: Dragon Ward
+MSEID_祈り: Miracle
+MSEID_カウンター: Counter
+MSEID_魔法カウンター: Countermagic
+MSEID_待ち伏せ: Vantage
+MSEID_獣特効: Beastbane
+MSEID_人形崩し: Golembane
+MSEID_暗夜: Nohrian Trust
+MSEID_白夜: Hoshidan Unity
+MSEID_救出: Shelter
+MSEID_体当たり: Shove
+MSEID_切り込み: Lunge
+MSEID_入れ替え: Swap
+MSEID_写し身人形: Replicate
+MSEID_先手必勝: Quick Draw
+MSEID_後手不敗: Strong Riposte
+MSEID_広所突撃: Elbow Room
+MSEID_閉所防御: Natural Cover
+MSEID_偶像の幻: Evenhanded
+MSEID_奇襲の牙: Odd Shaped
+MSEID_死線: Life and Death
+MSEID_お大尽: Spendthrift
+MSEID_清流の一撃: Duelist's Blow
+MSEID_飛燕の一撃: Darting Blow
+MSEID_鬼神の一撃: Death Blow
+MSEID_凶鳥の一撃: Certain Blow
+MSEID_金剛の一撃: Armored Blow
+MSEID_明鏡の一撃: Warding Blow
+MSEID_見下す者: Trample
+MSEID_守備隊形: Wary Fighter
+MSEID_剣の達人: Swordfaire
+MSEID_槍の達人: Lancefaire
+MSEID_斧の達人: Axefaire
+MSEID_暗器の達人: Shurikenfaire
+MSEID_弓の達人: Bowfaire
+MSEID_魔の達人: Tomefaire
+MSEID_守り手: Defender
+MSEID_名家の令息: Gentilhomme
+MSEID_深窓の令嬢: Demoiselle
+MSEID_戦闘指揮: Inspiration
+MSEID_魔の風: Malefic Aura
+MSEID_平和の声: Voice of Peace
+MSEID_異邦の王女: Foreign Princess
+MSEID_剣殺し: Swordbreaker
+MSEID_槍殺し: Lancebreaker
+MSEID_斧殺し: Axebreaker
+MSEID_暗器殺し: Shurikenbreaker
+MSEID_弓殺し: Bowbreaker
+MSEID_魔殺し: Tomebreaker
+MSEID_大振り: Gamble
+MSEID_下剋上: Underdog
+MSEID_ラッキー7: Lucky Seven
+MSEID_天翔ける: Air Superiority
+MSEID_呪縛: Heartseeker
+MSEID_傾奇者: Quixotic
+MSEID_しぶとい心: Good Fortune
+MSEID_リフレッシュ: Relief
+MSEID_和の心: Camaraderie
+MSEID_回復: Renewal
+MSEID_偶然のまどろみ: Even Better
+MSEID_奇妙な鳴き声: Better Odds
+MSEID_天照らす: Amaterasu
+MSEID_生命吸収: Lifetaker
+MSEID_よく効く薬: Potent Potion
+MSEID_ご奉仕の喜び: Live to Serve
+MSEID_蛇毒: Poison Strike
+MSEID_死の吐息: Savage Blow
+MSEID_四牙: Grisly Wound
+MSEID_匠の技: Salvage Blow
+MSEID_左うちわ: Profiteer
+MSEID_高貴なる血統: Nobility
+MSEID_おみくじ: Future Sight
+MSEID_良成長: Aptitude
+MSEID_常備薬: Quick Salve
+MSEID_疾風迅雷: Galeforce
+MSEID_すり抜け: Pass
+MSEID_鍵開け: Locktouch
+MSEID_ブリュンヒルデ: Brynhildr
+MSEID_命中回避+10: Hit/Avo +10
+MSEID_命中回避+20: Hit/Avo +20
+MSEID_竜鱗: Dragonskin
+MSEID_神盾: Divine Shield
+MSEID_状態異常耐性: Resist Status
+MSEID_状態異常無効: Immune Status
+MSEID_攻防一体の陣: Bold Stance
+MSEID_近接射撃: Point Blank
+MSEID_翼盾: Winged Shield
+MSEID_虚無の呪い: Void Curse
+MSEID_自壊: Self-Destruct
+MSEID_無限の杖: Staff Savant
+MSEID_凍結: Immobilize
+MSEID_負の連鎖: Inevitable End
+MSEID_偶人の空蝉: Even Keel
+MSEID_精神統一: Iron Will
+MSEID_心頭滅却: Clarity
+MSEID_居合一閃: Aggressor
+MSEID_測量術: Survey
+MSEID_自動砲台: Opportunity Shot
+MSEID_砲身改造: Rifled Barrel
+MSEID_水陸両用: Surefooted
+MSEID_暗闇の加護: Shadowgift
+MSEID_魔女の大釜: Witch's Brew
+MSEID_ワープ: Warp
+MSEID_魔女の毒薬: Toxic Brew
+MSEID_エリート: Paragon
+MSEID_獣盾: Beast Shield
+MSEID_鎧盾: Armor Shield
+MSEID_力の吸収: Strengthtaker
+MSEID_魔力の吸収: Magictaker
+MSEID_技の吸収: Skilltaker
+MSEID_速さの吸収: Speedtaker
+MSEID_幸運の吸収: Lucktaker
+MSEID_守備の吸収: Defensetaker
+MSEID_魔防の吸収: Resistancetaker
+MSEID_柔剣: Dancing Blade
+MSEID_カリスマ: Charm
+MSEID_防陣＋: Dual Guardsman
+MSEID_剛剣: Heavy Blade
+MSEID_歴戦の勘: Veteran Intuition
+MSEID_天空: Aether
+MSEID_攻陣＋: Dual Striker
+MSEID_覚醒: Awakening
+MSEID_戦術指南: Tactical Advice
+MSEID_方陣: Solidarity
+MSEID_華炎: Ignis
+MSEID_七色の叫び: Rally Spectrum
+MSEID_不思議な魅力: Supportive
+MSEID_絶対進攻: Forceful Partner
+MSEID_絶対援護: Devoted Partner
+MSEID_絶対死守: Evasive Partner
+MSEID_炎の血: Fiery Blood
+MSEID_絆の祈り: Miraculous Save
+MSEID_癒しの声: Healing Descant
+MSEID_小さな声援: Quiet Strength
+MSEID_お転婆: Fearsome Blow
+MSEID_完璧主義: Perfectionist
+MSEID_友情の誓い: Vow of Friendship
+MSEID_爆炎使い: Pyrotechnics
+MSEID_白夜の捕縛術: Capture
+MSEID_叱咤激励: Rallying Cry
+MSEID_天罰: Divine Retribution
+MSEID_ぼんやり: Optimistic
+MSEID_尊大: Pride
+MSEID_暗夜嫌い: Nohr Enmity
+MSEID_悪あがき: Triple Threat
+MSEID_対抗意識: Competitive
+MSEID_忍法車返し: Shuriken Mastery
+MSEID_勝者の愉悦: Morbid Celebration
+MSEID_恩返し: Reciprocity
+MSEID_武士道: Bushido
+MSEID_勝利への執念: In Extremis
+MSEID_ダーティファイト: Highwayman
+MSEID_可憐な花: Lily's Poise
+MSEID_不運の塊: Misfortunate
+MSEID_怪力: Puissance
+MSEID_血の疼き: Aching Blood
+MSEID_暗夜の拘束術: Kidnap
+MSEID_呪詛返し: Countercurse
+MSEID_妖艶な花: Rose's Thorns
+MSEID_負けん気: Fierce Rival
+MSEID_奇襲任務: Opportunist
+MSEID_蒼の踊り: Fancy Footwork
+MSEID_殺戮本能: Bloodthirst
+MSEID_強面: Fierce Mien
+MSEID_女の本性: Unmask
+MSEID_冷血: Pragmatic
+MSEID_拾いもの: Collector
+MSEID_騎士道: Chivalry
+MSEID_美しき王: Peacebringer
+MSEID_軍略伝授: Perspicacious
+MSEID_氷の血: Icy Blood
+MSEID_農地の主: Forager
+MSEID_竜の御子: Draconic Heir
+MSEID_執事の嗜み: Born Steward
+MSEID_チューニング: Perfect Pitch
+MSEID_おっちょこちょい: Mischievous
+MSEID_幸運のおまじない: Lucky Charm
+MSEID_大義の勇: Noble Cause
+MSEID_前向き: Optimist
+MSEID_甘党: Sweet Tooth
+MSEID_じゃれつき: Playthings
+MSEID_冷静沈着: Calm
+MSEID_五・七・五: Haiku
+MSEID_天才肌: Prodigy
+MSEID_執念: Vendetta
+MSEID_レディーファースト: Gallant
+MSEID_臆病: Guarded Bravery
+MSEID_だまし討ち: Fierce Counter
+MSEID_ひろい食い: Goody Basket
+MSEID_強運の塊: Fortunate Son
+MSEID_乙女心の躍動: Bibliophile
+MSEID_女の子好き: Sisterhood
+MSEID_邪な空想: Daydream
+MSEID_一攫千金: Make a Killing
+MSEID_風の血: Wind Disciple
+MIID_非公開: ????????
+MIID_不明: Outrealm Item
+MIID_無し: None
+MIID_青銅の剣: Bronze Sword
+MIID_鉄の剣: Iron Sword
+MIID_鋼の剣: Steel Sword
+MIID_銀の剣: Silver Sword
+MIID_勇者の剣: Brave Sword
+MIID_鉄の投撃剣: Iron Kukri
+MIID_鋼の投撃剣: Steel Kukri
+MIID_銀の投撃剣: Silver Kukri
+MIID_アーマーキラー: Armorslayer
+MIID_ドラゴンキラー: Wyrmslayer
+MIID_キルソード: Killing Edge
+MIID_サンダーソード: Levin Sword
+MIID_ガングレリ: Ganglari
+MIID_ジークフリート: Siegfried
+MIID_ワインボトル: Bottle
+MIID_洋傘: Umbrella
+MIID_暗夜の漆黒剣: Nohrian Blade
+MIID_レオンの冷剣: Leo's Iceblade
+MIID_ルーナの鋭剣: Selena's Blade
+MIID_ラズワルドの舞剣: Laslow's Blade
+MIID_青銅の刀: Brass Katana
+MIID_鉄の刀: Iron Katana
+MIID_鋼の刀: Steel Katana
+MIID_銀の刀: Silver Katana
+MIID_武者の刀: Venge Katana
+MIID_鉄の投撃刀: Iron Katti
+MIID_鋼の投撃刀: Steel Katti
+MIID_銀の投撃刀: Silver Katti
+MIID_斧斬りの刀: Axe Splitter
+MIID_逆刀: Dual Katana
+MIID_居合刀: Practice Katana
+MIID_小太刀: Kodachi
+MIID_飛刀: Wakizashi
+MIID_霊刀: Spirit Katana
+MIID_葉隠: Hagakure Blade
+MIID_夜刀神: Yato
+MIID_夜刀神・空夜: Noble Yato
+MIID_夜刀神・白夜: Blazing Yato
+MIID_夜刀神・長夜: Grim Yato
+MIID_夜刀神・暗夜: Shadow Yato
+MIID_夜刀神・幻夜: Alpha Yato
+MIID_夜刀神・終夜: Omega Yato
+MIID_雷神刀: Raijinto
+MIID_大根: Daikon Radish
+MIID_和傘: Parasol
+MIID_追い剥ぎの刀: Raider Katana
+MIID_白夜の霞刀: Sunrise Katana
+MIID_タクミの竹刀: Takumi's Shinai
+MIID_カザハナの麗刀: Hana's Katana
+MIID_ヒナタの猛刀: Hinata's Katana
+MIID_青銅の槍: Bronze Lance
+MIID_鉄の槍: Iron Lance
+MIID_鋼の槍: Steel Lance
+MIID_銀の槍: Silver Lance
+MIID_勇者の槍: Brave Lance
+MIID_鉄の投撃槍: Iron Javelin
+MIID_鋼の投撃槍: Steel Javelin
+MIID_銀の投撃槍: Silver Javelin
+MIID_手槍: Javelin
+MIID_スレンドスピア: Spear
+MIID_ビーストキラー: Beast Killer
+MIID_キラーランス: Killer Lance
+MIID_聖なる槍: Blessed Lance
+MIID_ほうき: Broom
+MIID_小枝: Stick
+MIID_魔封じの槍: Hexlock Spear
+MIID_マークスの指南槍: Xander's Lance
+MIID_エルフィの大槍: Effie's Lance
+MIID_ピエリの小槍: Peri's Lance
+MIID_青銅の薙刀: Brass Naginata
+MIID_鉄の薙刀: Iron Naginata
+MIID_鋼の薙刀: Steel Naginata
+MIID_銀の薙刀: Silver Naginata
+MIID_鉄の投撃薙刀: Iron Nageyari
+MIID_鋼の投撃薙刀: Steel Nageyari
+MIID_銀の投撃薙刀: Silver Nageyari
+MIID_武者の薙刀: Venge Naginata
+MIID_剣薙ぎの薙刀: Swordcatcher
+MIID_逆薙刀: Dual Naginata
+MIID_守りの薙刀: Guard Naginata
+MIID_神雷の薙刀: Bolt Naginata
+MIID_水車: Waterwheel
+MIID_竹竿: Bamboo Pole
+MIID_松の木: Pine Branch
+MIID_追い剥ぎの薙刀: Raider Naginata
+MIID_捨て身の薙刀: Bold Naginata
+MIID_ヒノカの紅薙刀: Hinoka's Spear
+MIID_ツバキの金薙刀: Subaki's Pike
+MIID_オボロの漆薙刀: Oboro's Spear
+MIID_青銅の斧: Bronze Axe
+MIID_鉄の斧: Iron Axe
+MIID_鋼の斧: Steel Axe
+MIID_銀の斧: Silver Axe
+MIID_勇者の斧: Brave Axe
+MIID_鉄の投撃斧: Iron Star Axe
+MIID_鋼の投撃斧: Steel Star Axe
+MIID_銀の投撃斧: Silver Star Axe
+MIID_手斧: Hand Axe
+MIID_トマホーク: Tomahawk
+MIID_ハンマー: Hammer
+MIID_ボルトアクス: Bolt Axe
+MIID_キラーアクス: Killer Axe
+MIID_アウルゲルミル: Aurgelmir
+MIID_ベルヴェルク: Bölverk
+MIID_フライパン: Frying Pan
+MIID_獣の骨: Bone Axe
+MIID_追い剥ぎの斧: Raider Axe
+MIID_狂戦士の斧: Berserker's Axe
+MIID_カミラの艶斧: Camilla's Axe
+MIID_ハロルドの雄斧: Arthur's Axe
+MIID_ベルカの殺斧: Beruka's Axe
+MIID_青銅の金棒: Brass Club
+MIID_鉄の金棒: Iron Club
+MIID_鋼の金棒: Steel Club
+MIID_銀の金棒: Silver Club
+MIID_武者の金棒: Venge Club
+MIID_鉄の投撃金棒: Iron Mace
+MIID_鋼の投撃金棒: Steel Mace
+MIID_銀の投撃金棒: Silver Mace
+MIID_槍砕きの金棒: Pike-Ruin Club
+MIID_逆金棒: Dual Club
+MIID_大金棒: Great Club
+MIID_投げ棒: Throwing Club
+MIID_破城の投げ棒: Battering Club
+MIID_鯉のぼり: Carp Streamer
+MIID_クワ: Hoe
+MIID_金剛の金棒: Adamant Club
+MIID_リンカの鬼金棒: Rinkah's Club
+MIID_リョウマの鍛錬棒: Ryoma's Club
+MIID_フウガの疾風金棒: Fuga's Club
+MIID_青銅の暗器: Bronze Dagger
+MIID_鉄の暗器: Iron Dagger
+MIID_鋼の暗器: Steel Dagger
+MIID_銀の暗器: Silver Dagger
+MIID_強者の暗器: Soldier's Knife
+MIID_果物ナイフ: Fruit Knife
+MIID_獣狩りの暗器: Hunter's Knife
+MIID_クリスナイフ: Kris Knife
+MIID_羽ペン: Quill Pen
+MIID_固いパン: Stale Bread
+MIID_追い剥ぎナイフ: Raider Knife
+MIID_祈りのロウソク: Votive Candle
+MIID_死を呼ぶナイフ: Sacrificial Knife
+MIID_フェリシアの氷皿: Felicia's Plate
+MIID_ジョーカーの食器: Jakob's Tray
+MIID_青銅の手裏剣: Brass Shuriken
+MIID_鉄の手裏剣: Iron Shuriken
+MIID_鋼の手裏剣: Steel Shuriken
+MIID_銀の手裏剣: Silver Shuriken
+MIID_巧者の手裏剣: Spy's Shuriken
+MIID_逆手裏剣: Dual Shuriken
+MIID_針手裏剣: Sting Shuriken
+MIID_暗殺手裏剣: Barb Shuriken
+MIID_爆炎手裏剣: Flame Shuriken
+MIID_朧: Chakram
+MIID_菜箸: Chopstick
+MIID_かんざし: Hair Pin
+MIID_撒菱: Caltrop
+MIID_スズカゼの疾風針: Kaze's Needle
+MIID_サイゾウの爆炎針: Saizo's Star
+MIID_カゲロウの眩惑針: Kagero's Dart
+MIID_青銅の弓: Bronze Bow
+MIID_鉄の弓: Iron Bow
+MIID_鋼の弓: Steel Bow
+MIID_銀の弓: Silver Bow
+MIID_強者の弓: Crescent Bow
+MIID_鉄の近撃弓: Iron Shortbow
+MIID_鋼の近撃弓: Steel Shortbow
+MIID_銀の近撃弓: Silver Shortbow
+MIID_キラーボウ: Killer Bow
+MIID_聖なる弓: Blessed Bow
+MIID_ショートボウ: Mini Bow
+MIID_シャイニングボウ: Shining Bow
+MIID_ゴムの弓: Rubber Bow
+MIID_バイオリンの弓: Violin Bow
+MIID_キューピッドの弓: Cupid Bow
+MIID_狩人の弓: Hunter's Bow
+MIID_アンナの福弓: Anna's Bow
+MIID_ゼロの虐弓: Niles's Bow
+MIID_青銅の和弓: Brass Yumi
+MIID_鉄の和弓: Iron Yumi
+MIID_鋼の和弓: Steel Yumi
+MIID_銀の和弓: Silver Yumi
+MIID_巧者の和弓: Spy's Yumi
+MIID_鉄の近撃和弓: Iron Hankyu
+MIID_鋼の近撃和弓: Steel Hankyu
+MIID_銀の近撃和弓: Silver Hankyu
+MIID_逆和弓: Dual Yumi
+MIID_明鏡の和弓: Illusory Yumi
+MIID_必中の和弓: Surefire Yumi
+MIID_残心: Pursuer
+MIID_風神弓: Fujin Yumi
+MIID_風神弓（青銅）: Fujin Yumi
+MIID_スカディ: Skadi
+MIID_竹の和弓: Bamboo Yumi
+MIID_琵琶の和弓: Harp Yumi
+MIID_追い剥ぎの和弓: Raider Yumi
+MIID_破魔矢: Spellbane Yumi
+MIID_横撃ちの和弓: Sidelong Yumi
+MIID_ミコトの霊弓: Mikoto's Yumi
+MIID_セツナの緩弓: Setsuna's Yumi
+MIID_ファイアー: Fire
+MIID_サンダー: Thunder
+MIID_フィンブル: Fimbulvetr
+MIID_ライナロック: Ragnarok
+MIID_ユグドラシル: Ginnungagap
+MIID_エクスカリバー: Excalibur
+MIID_ライトニング: Lightning
+MIID_ミョルニル: Mjölnir
+MIID_リザイア: Nosferatu
+MIID_スライム: Mire
+MIID_ブリュンヒルデ: Brynhildr
+MIID_プチファイアー: Ember
+MIID_ミステルトィン: Missiletainn
+MIID_ローバー: Disrobing Gale
+MIID_ブーストサンダー: Speed Thunder
+MIID_ムーンライト: Moonlight
+MIID_マクベスの惑書: Iago's Tome
+MIID_オーディンの黒書: Odin's Grimoire
+MIID_鼠神・子: Rat Spirit
+MIID_牛神・丑: Ox Spirit
+MIID_虎神・寅: Tiger Spirit
+MIID_兎神・卯: Rabbit Spirit
+MIID_龍神・辰: Dragon Spirit
+MIID_逆神・丑寅: Calamity Gate
+MIID_蛇神・巳: Snake Spirit
+MIID_馬神・午: Horse Spirit
+MIID_羊神・未: Sheep Spirit
+MIID_紙: Paper
+MIID_古びた書物: Malevolent Text
+MIID_猿神・申: Monkey Spirit
+MIID_鳥神・酉: Bird Spirit
+MIID_虹の賢者の墨絵: Ink Painting
+MIID_イザナの古呪: Izana's Scroll
+MIID_ライブ: Heal
+MIID_リライブ: Mend
+MIID_リブロー: Physic
+MIID_リカバー: Recover
+MIID_リザーブ: Fortify
+MIID_フリーズ: Freeze
+MIID_ウィークネス: Enfeeble
+MIID_ドロー: Entrap
+MIID_ビフレスト: Bifröst
+MIID_お菓子の杖: Candy Cane
+MIID_キノコの杖: Mushroom Staff
+MIID_花束の杖: Bouquet Staff
+MIID_エリーゼの幼杖: Elise's Staff
+MIID_リリスの星杖: Lilith's Staff
+MIID_春祭: Bloom Festal
+MIID_夏祭: Sun Festal
+MIID_秋祭: Wane Festal
+MIID_冬祭: Moon Festal
+MIID_大祭: Great Festal
+MIID_七難即滅: Rescue
+MIID_神風招来: Silence
+MIID_禍事罪穢: Hexing Rod
+MIID_ちょうちん: Lantern
+MIID_団子串: Dumpling Rod
+MIID_笹飾り: Bamboo Branch
+MIID_サクラの小祓串: Sakura's Rod
+MIID_アサマの捻れ祓串: Purification Rod
+MIID_竜石: Dragonstone
+MIID_真竜石: Dragonstone+
+MIID_獣石: Beaststone
+MIID_守獣石: Beastrune
+MIID_超獣石: Beaststone+
+MIID_竜のブレス: Draconic Rage
+MIID_暗夜竜のブレス: Dark Breath
+MIID_透魔竜のブレス: Dragon Breath
+MIID_乱拳: Shackled Fist
+MIID_狂乱拳: Gauntlet
+MIID_岩塊: Rock
+MIID_巨岩塊: Massive Rock
+MIID_星竜のブレス: Astral Breath
+MIID_星竜の加護: Astral Blessing
+MIID_絡繰鋸: Saw
+MIID_絡繰巨大鋸: Big Saw
+MIID_傷薬: Vulnerary
+MIID_調合薬: Concoction
+MIID_特効薬: Elixir
+MIID_HPの薬: HP Tonic
+MIID_力の薬: Strength Tonic
+MIID_魔力の薬: Magic Tonic
+MIID_技の薬: Skill Tonic
+MIID_速さの薬: Speed Tonic
+MIID_幸運の薬: Luck Tonic
+MIID_守備の薬: Defense Tonic
+MIID_魔防の薬: Resistance Tonic
+MIID_アクアの秘薬: Azura's Salve
+MIID_ギュンターの良薬: Gunter's Potion
+MIID_グレイの創作菓子: Asugi's Confect
+MIID_虹の秘薬: Rainbow Tonic
+MIID_絆の種: Seed of Trust
+MIID_ハープ: Allegro Harp
+MIID_ほら貝: Shell Horn
+MIID_扉の鍵: Door Key
+MIID_宝の鍵: Chest Key
+MIID_万能鍵: Master Key
+MIID_天使の衣: Seraph Robe
+MIID_力のしずく: Energy Drop
+MIID_精霊の粉: Spirit Dust
+MIID_秘伝の書: Secret Book
+MIID_はやての羽: Speedwing
+MIID_女神の像: Goddess Icon
+MIID_竜の盾: Dracoshield
+MIID_魔よけ: Talisman
+MIID_神竜草: Dragon Herbs
+MIID_ブーツ: Boots
+MIID_術書: Arms Scroll
+MIID_マスタープルフ: Master Seal
+MIID_パラレルプルフ: Heart Seal
+MIID_マリッジプルフ: Partner Seal
+MIID_バディプルフ: Friendship Seal
+MIID_エターナルプルフ: Eternal Seal
+MIID_チャイルドプルフ: Offspring Seal
+MIID_予約プルフ０１: Promise Seal 01
+MIID_予約プルフ０２: Promise Seal 02
+MIID_予約プルフ０３: Promise Seal 03
+MIID_小判: Gold Bar
+MIID_金塊（小）: Bullion (S)
+MIID_金塊（中）: Bullion (M)
+MIID_金塊（大）: Bullion (L)
+MIID_真ガングレリ: Ganglari
+MIID_魔戦士の巻物: Dread Scroll
+MIID_黒天馬の翼: Ebon Wing
+MIID_戦闘王の紋章: Battle Seal
+MIID_訪問王の紋章: Visitation Seal
+MIID_1000G: 1000G
+MIID_2000G: 2000G
+MIID_3000G: 3000G
+MIID_5000G: 5000G
+MIID_7000G: 7000G
+MIID_10000G: 10000G
+MIID_20000G: 20000G
+MIID_障害物: Obstacle
+MIID_シューター砲台: Sighting Lens
+MIID_魔女の魔法陣: Witch's Mark
+MIID_エリートの書: Paragon
+MIID_鎧盾の書: Armor Shield
+MIID_獣盾の書: Beast Shield
+MIID_翼盾の書: Winged Shield
+MIID_近接射撃の書: Point Blank
+MIID_攻防一体の陣の書: Bold Stance
+MIID_力の吸収の書: Strengthtaker
+MIID_魔力の吸収の書: Magictaker
+MIID_技の吸収の書: Skilltaker
+MIID_速さの吸収の書: Speedtaker
+MIID_幸運の吸収の書: Lucktaker
+MIID_守備の吸収の書: Defensetaker
+MIID_魔防の吸収の書: Resistancetaker
+MIID_絆の王の紋章: Master Emblem
+MIID_神剣ファルシオン: Falchion
+MIID_神剣ラグネル: Ragnell
+MIID_裏剣ファルシオン: Parallel Falchion
+MIID_雷書トロン: Thoron
+MIID_マルスの模擬剣: Marth's Spatha
+MIID_アイクの模擬剣: Ike's Backup
+MIID_ルキナの模擬剣: Lucina's Estoc
+MIID_ルフレの写本: Robin's Primer
+MTID_移動不可: Obstacle
+MTID_平地: Plain
+MTID_氷丘: Ice
+MTID_毒沼: Acid Bog
+MTID_闇沼: Marsh
+MTID_竹槍: Spikes
+MTID_溶岩床: Lava
+MTID_嵐: Tempest
+MTID_林: Woods
+MTID_砂漠: Desert
+MTID_荒地: Waste
+MTID_田畑: Field
+MTID_山: Mountain
+MTID_高山: Peak
+MTID_崖: Cliff
+MTID_断崖: Tall Cliff
+MTID_深い森: Thick Wood
+MTID_空: Emptiness
+MTID_風の渦: Storm
+MTID_竜巻: Tornado
+MTID_橋: Bridge
+MTID_河: Water
+MTID_泉: Spring
+MTID_海: Sea
+MTID_湖: Lake
+MTID_砦: Fort
+MTID_召喚床: Sigil
+MTID_穴: Hole
+MTID_城門: Gate
+MTID_廃墟門: Old Gate
+MTID_墓: Grave
+MTID_村: Village
+MTID_閉じ村: (Village)
+MTID_廃村: (Village)
+MTID_建物: Edifice
+MTID_低建物: Building
+MTID_壁: Wall
+MTID_本棚: Shelves
+MTID_水晶玉: Crystal
+MTID_篝火: Torch
+MTID_桜: Cherry Tree
+MTID_大樹: Big Tree
+MTID_低壁: Partition
+MTID_瓦礫: Rubble
+MTID_庭石: Stone
+MTID_隆起: Protrusion
+MTID_土塁: Levee
+MTID_床: Floor
+MTID_階段: Stairs
+MTID_門口: Gate
+MTID_暗夜床: Blight
+MTID_柱: Pillar
+MTID_座布団: Cushion
+MTID_玉座: Throne
+MTID_回復床: Healtile
+MTID_剣の間: Chamber
+MTID_扉: Door
+MTID_襖: Screen
+MTID_宝箱: Chest
+MTID_古木: Dead Tree
+MTID_暗器砲台: Launcher
+MTID_弓砲台: Ballista
+MTID_魔道砲台: Fire Orb
+MTID_氷海: Icy Sea
+MTID_海の道: Path
+MTID_良薬: Medicine
+MTID_劇薬: Poison
+MTID_撒菱: Caltrops
+MTID_水壁: Dark Waters
+MTID_障壁: Barrier
+MTID_魔方陣: Sigil
+MTID_渓谷: Canyon
+MTID_炎壁: Flamewall
+MTID_御神木: Holy Tree
+MTID_太柱: Column
+MTID_闇: Darkness
+MTID_氷: Ice
+MTID_鎖: Lock
+MTID_守護床: Ward
+MTID_氷結泉: Ice Patch
+MTID_水たまり: Water
+MTID_防壁: Barrier
+MTID_障害物: Obstacle
+MTID_宇宙: Void
+MTID_竜の体: Body
+MTID_竜の足: Claw
+MTID_竜の核: Core
+MTID_コア: Heart
+MTID_堀: Moat
+MTID_空堀: Moat Bed

@@ -1,6 +1,6 @@
 package fefeditor.common;
 
-import fefeditor.common.io.BinFile;
+import feflib.fates.gamedata.terrain.BinFile;
 import fefeditor.common.io.CompressionUtils;
 import fefeditor.data.FileData;
 import javafx.stage.FileChooser;
