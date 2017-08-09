@@ -198,8 +198,7 @@ class SupportBin(file: File)
     }).toBuffer
 
     // Remove data.
-    for (x <- 0 until bytes.length)
-      data.remove(deleteOffset)
+    data.remove(deleteOffset, bytes.length)
 
     // Fix data and pointer one using recalculated pointers.
     for(x <- newPtrOne.indices) {
