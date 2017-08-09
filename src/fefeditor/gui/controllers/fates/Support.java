@@ -127,6 +127,9 @@ public class Support implements Initializable {
         typeEditor.setItems(supportTypes.getItems());
         supportForm.getChildren().add(typeEditor);
 
+        Button deleteSupport = new Button("Delete");
+        supportForm.getChildren().add(deleteSupport);
+
         supportCList.getSelectionModel().selectedIndexProperty().addListener((observable, oldValue, newValue) -> {
             supportList.getItems().clear();
             if (newValue.intValue() == -1)
@@ -174,6 +177,41 @@ public class Support implements Initializable {
             supportCList.getSelectionModel().clearSelection();
             supportCList.getSelectionModel().select(selection);
         });
+        deleteSupport.setOnAction(event -> {
+            if (supportCList.getSelectionModel().getSelectedIndex() == -1 || supportList.getSelectionModel().getSelectedIndex() == -1)
+                return;
+
+            SupportCharacter character = characters.get(supportCList.getSelectionModel().getSelectedIndex());
+            SupportCharacter target = getByName(supportList.getSelectionModel().getSelectedItem());
+
+            CharSupport[] supports = bin.getSupports(character);
+            int index = -1;
+            for (int i = 0; i < supports.length; i++) {
+                CharSupport c = supports[i];
+                if (c.getCharId() == target.getCharId()) {
+                    index = i;
+                    break;
+                }
+            }
+            CharSupport[] targetSupports = bin.getSupports(target);
+            int index2 = -1;
+            for (int i = 0; i < targetSupports.length; i++) {
+                CharSupport c = targetSupports[i];
+                if (c.getCharId() == character.getCharId()) {
+                    index2 = i;
+                    break;
+                }
+            }
+
+            bin.removeSupport(character, index, makeSupportBytes(character, supports[index], index));
+            bin.removeSupport(target, index2, makeSupportBytes(target, targetSupports[index2], index2));
+
+            supportCharacters.getSelectionModel().clearSelection();
+            supportTypes.getSelectionModel().clearSelection();
+            int selection = supportCList.getSelectionModel().getSelectedIndex();
+            supportCList.getSelectionModel().clearSelection();
+            supportCList.getSelectionModel().select(selection);
+        });
         typeEditor.getSelectionModel().selectedIndexProperty().addListener((observable, oldValue, newValue) -> {
             if (typeEditor.getSelectionModel().getSelectedIndex() != -1 && supportList.getSelectionModel().getSelectedIndex() != -1) {
                 SupportCharacter character = characters.get(supportCList.getSelectionModel().getSelectedIndex());
@@ -199,13 +237,17 @@ public class Support implements Initializable {
         unusedCharacters.remove(block);
     }
 
-    private void addSupport(SupportCharacter character, CharSupport support, int index) {
+    private byte[] makeSupportBytes(SupportCharacter character, CharSupport support, int index) {
         byte[] bytes = new byte[0xC];
         System.arraycopy(ArrayConvert.toByteArray((short) support.getCharId()), 0, bytes, 0, 2);
         System.arraycopy(ArrayConvert.toByteArray((short) index), 0, bytes, 2, 2);
         System.arraycopy(support.getBytes(), 0, bytes, 4, 4);
         bytes[0x8] = 0x1; // Fix for supports not leveling.
-        bin.addSupport(character, bytes);
+        return bytes;
+    }
+
+    private void addSupport(SupportCharacter character, CharSupport support, int index) {
+        bin.addSupport(character, makeSupportBytes(character, support, index));
     }
 
     private SupportCharacter getById(int id) {
