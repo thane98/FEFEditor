@@ -166,6 +166,59 @@ class SupportBin(file: File)
     }
   }
 
+  def removeSupport(character: SupportCharacter, index: Int, bytes: Array[Byte]): Unit = {
+    val temp = data.toArray
+    val tableOffset = offsets(character.getSupportId)
+    val tableSize = ArrayUtils.getUInt16(temp, tableOffset + 2)
+    val deleteOffset = tableOffset + 0x4 + index * 0xC
+
+    val sizeBytes = ArrayConvert.toByteArray(tableSize - 1)
+    for(x <- 0 until 2)
+      data(tableOffset + 2 + x) = sizeBytes(x)
+
+    // Fix pointers.
+    var newPtrOne = ptrOneList().toBuffer
+    var newPtrTwo = ptrTwoList().toBuffer
+    newPtrOne = List.tabulate(newPtrOne.length) (n => {
+      var newPtr = newPtrOne(n)._1
+      var newDataPtr = newPtrOne(n)._2
+      if(newPtr >= deleteOffset) {
+        newPtr -= bytes.length
+      }
+      if(newDataPtr >= deleteOffset) {
+        newDataPtr -= bytes.length
+      }
+      (newPtr, newDataPtr)
+    }).toBuffer
+    newPtrTwo = List.tabulate(newPtrTwo.length) (n => {
+      var newPtr = newPtrTwo(n)._1
+      if(newPtr > deleteOffset)
+        newPtr -= bytes.length
+      (newPtr, newPtrTwo(n)._2)
+    }).toBuffer
+
+    // Remove data.
+    data.remove(deleteOffset, bytes.length)
+
+    // Fix data and pointer one using recalculated pointers.
+    for(x <- newPtrOne.indices) {
+      val ptrBytes = ArrayConvert.toByteArray(newPtrOne(x)._1)
+      val dataBytes = ArrayConvert.toByteArray(newPtrOne(x)._2)
+      for(y <- 0 until 4) {
+        ptrOne(x * 4 + y) = ptrBytes(y)
+        data(newPtrOne(x)._1 + y) = dataBytes(y)
+      }
+    }
+
+    // Fix pointer two using recalculated pointers.
+    for(x <- newPtrTwo.indices) {
+      val ptrBytes = ArrayConvert.toByteArray(newPtrTwo(x)._1)
+      for(y <- 0 until 4) {
+        ptrTwo(x * 8 + y) = ptrBytes(y)
+      }
+    }
+  }
+
   def addSupportTable(bytes: Array[Byte], supportId: Short, blockStart: Int): Unit = {
     val temp = data.toArray
     val tableOffset = offsets.last
